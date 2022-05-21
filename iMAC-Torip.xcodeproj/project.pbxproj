@@ -1,0 +1,834 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		492F0C46C55A837C23275150 /* Pods_iMAC_Torip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */; };
+		5657FAFAF7194038BCCE2B87 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83AB9505507D32B4BBFEDB8 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework */; };
+		8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A508C2838C73000E9F2A6 /* AppDelegate.swift */; };
+		8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A508E2838C73000E9F2A6 /* SceneDelegate.swift */; };
+		8E3A50912838C73000E9F2A6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50902838C73000E9F2A6 /* ViewController.swift */; };
+		8E3A50942838C73000E9F2A6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50922838C73000E9F2A6 /* Main.storyboard */; };
+		8E3A50962838C73500E9F2A6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50952838C73500E9F2A6 /* Assets.xcassets */; };
+		8E3A50992838C73500E9F2A6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50972838C73500E9F2A6 /* LaunchScreen.storyboard */; };
+		8E3A50A42838C73600E9F2A6 /* iMAC_ToripTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50A32838C73600E9F2A6 /* iMAC_ToripTests.swift */; };
+		8E3A50AE2838C73600E9F2A6 /* iMAC_ToripUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50AD2838C73600E9F2A6 /* iMAC_ToripUITests.swift */; };
+		8E3A50B02838C73600E9F2A6 /* iMAC_ToripUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50AF2838C73600E9F2A6 /* iMAC_ToripUITestsLaunchTests.swift */; };
+		8E3A50C22838C95800E9F2A6 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50C12838C95800E9F2A6 /* Home.storyboard */; };
+		8E3A50C42838C96500E9F2A6 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50C32838C96500E9F2A6 /* Search.storyboard */; };
+		8E3A50C62838C97200E9F2A6 /* Alarm.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50C52838C97200E9F2A6 /* Alarm.storyboard */; };
+		8E3A50C82838C97C00E9F2A6 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50C72838C97C00E9F2A6 /* Profile.storyboard */; };
+		8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50C92838C9CF00E9F2A6 /* HomeViewController.swift */; };
+		8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50CB2838CA6B00E9F2A6 /* SearchViewController.swift */; };
+		8E3A50CE2838CAFC00E9F2A6 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50CD2838CAFC00E9F2A6 /* AlarmViewController.swift */; };
+		8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50CF2838CB2400E9F2A6 /* ProfileViewController.swift */; };
+		D53D321D43337A57E5DC4FF1 /* Pods_iMAC_ToripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8E3A50A02838C73600E9F2A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E3A50812838C73000E9F2A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E3A50882838C73000E9F2A6;
+			remoteInfo = "iMAC-Torip";
+		};
+		8E3A50AA2838C73600E9F2A6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8E3A50812838C73000E9F2A6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8E3A50882838C73000E9F2A6;
+			remoteInfo = "iMAC-Torip";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0B45B7E7A3AA74CC229B2A15 /* Pods-iMAC-ToripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-ToripTests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-ToripTests/Pods-iMAC-ToripTests.release.xcconfig"; sourceTree = "<group>"; };
+		0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_Torip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_ToripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3ABC8514FE890D1220889059 /* Pods-iMAC-Torip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip.debug.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip/Pods-iMAC-Torip.debug.xcconfig"; sourceTree = "<group>"; };
+		58880E68ECD70A16DC5B5959 /* Pods-iMAC-ToripTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-ToripTests.debug.xcconfig"; path = "Target Support Files/Pods-iMAC-ToripTests/Pods-iMAC-ToripTests.debug.xcconfig"; sourceTree = "<group>"; };
+		8E3A50892838C73000E9F2A6 /* iMAC-Torip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iMAC-Torip.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E3A508C2838C73000E9F2A6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8E3A508E2838C73000E9F2A6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		8E3A50902838C73000E9F2A6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8E3A50932838C73000E9F2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8E3A50952838C73500E9F2A6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8E3A50982838C73500E9F2A6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8E3A509A2838C73500E9F2A6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E3A509F2838C73600E9F2A6 /* iMAC-ToripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iMAC-ToripTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E3A50A32838C73600E9F2A6 /* iMAC_ToripTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMAC_ToripTests.swift; sourceTree = "<group>"; };
+		8E3A50A92838C73600E9F2A6 /* iMAC-ToripUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iMAC-ToripUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8E3A50AD2838C73600E9F2A6 /* iMAC_ToripUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMAC_ToripUITests.swift; sourceTree = "<group>"; };
+		8E3A50AF2838C73600E9F2A6 /* iMAC_ToripUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iMAC_ToripUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E3A50C12838C95800E9F2A6 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		8E3A50C32838C96500E9F2A6 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		8E3A50C52838C97200E9F2A6 /* Alarm.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Alarm.storyboard; sourceTree = "<group>"; };
+		8E3A50C72838C97C00E9F2A6 /* Profile.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		8E3A50C92838C9CF00E9F2A6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		8E3A50CB2838CA6B00E9F2A6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8E3A50CD2838CAFC00E9F2A6 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
+		8E3A50CF2838CB2400E9F2A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		A564B95EE2441A1765B8D939 /* Pods-iMAC-Torip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip/Pods-iMAC-Torip.release.xcconfig"; sourceTree = "<group>"; };
+		D85E101497FCDE20AE2FA068 /* Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; sourceTree = "<group>"; };
+		E18CF7CB332905979D2B44A4 /* Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E83AB9505507D32B4BBFEDB8 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_Torip_iMAC_ToripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8E3A50862838C73000E9F2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				492F0C46C55A837C23275150 /* Pods_iMAC_Torip.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E3A509C2838C73600E9F2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D53D321D43337A57E5DC4FF1 /* Pods_iMAC_ToripTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E3A50A62838C73600E9F2A6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5657FAFAF7194038BCCE2B87 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0477B032FCA585519D3AF76C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3ABC8514FE890D1220889059 /* Pods-iMAC-Torip.debug.xcconfig */,
+				A564B95EE2441A1765B8D939 /* Pods-iMAC-Torip.release.xcconfig */,
+				E18CF7CB332905979D2B44A4 /* Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig */,
+				D85E101497FCDE20AE2FA068 /* Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig */,
+				58880E68ECD70A16DC5B5959 /* Pods-iMAC-ToripTests.debug.xcconfig */,
+				0B45B7E7A3AA74CC229B2A15 /* Pods-iMAC-ToripTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8E3A50802838C73000E9F2A6 = {
+			isa = PBXGroup;
+			children = (
+				8E3A508B2838C73000E9F2A6 /* iMAC-Torip */,
+				8E3A50A22838C73600E9F2A6 /* iMAC-ToripTests */,
+				8E3A50AC2838C73600E9F2A6 /* iMAC-ToripUITests */,
+				8E3A508A2838C73000E9F2A6 /* Products */,
+				0477B032FCA585519D3AF76C /* Pods */,
+				B7BF26128BA5DFB96CFE3DCD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8E3A508A2838C73000E9F2A6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A50892838C73000E9F2A6 /* iMAC-Torip.app */,
+				8E3A509F2838C73600E9F2A6 /* iMAC-ToripTests.xctest */,
+				8E3A50A92838C73600E9F2A6 /* iMAC-ToripUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8E3A508B2838C73000E9F2A6 /* iMAC-Torip */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A50C02838C91300E9F2A6 /* Profile */,
+				8E3A50BF2838C90800E9F2A6 /* Alarm */,
+				8E3A50BE2838C8FE00E9F2A6 /* Search */,
+				8E3A50BD2838C8F700E9F2A6 /* Home */,
+				8E3A50BC2838C8EA00E9F2A6 /* Utils */,
+				8E3A508C2838C73000E9F2A6 /* AppDelegate.swift */,
+				8E3A508E2838C73000E9F2A6 /* SceneDelegate.swift */,
+				8E3A50902838C73000E9F2A6 /* ViewController.swift */,
+				8E3A50922838C73000E9F2A6 /* Main.storyboard */,
+				8E3A50952838C73500E9F2A6 /* Assets.xcassets */,
+				8E3A50972838C73500E9F2A6 /* LaunchScreen.storyboard */,
+				8E3A509A2838C73500E9F2A6 /* Info.plist */,
+			);
+			path = "iMAC-Torip";
+			sourceTree = "<group>";
+		};
+		8E3A50A22838C73600E9F2A6 /* iMAC-ToripTests */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A50A32838C73600E9F2A6 /* iMAC_ToripTests.swift */,
+			);
+			path = "iMAC-ToripTests";
+			sourceTree = "<group>";
+		};
+		8E3A50AC2838C73600E9F2A6 /* iMAC-ToripUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A50AD2838C73600E9F2A6 /* iMAC_ToripUITests.swift */,
+				8E3A50AF2838C73600E9F2A6 /* iMAC_ToripUITestsLaunchTests.swift */,
+			);
+			path = "iMAC-ToripUITests";
+			sourceTree = "<group>";
+		};
+		8E3A50BC2838C8EA00E9F2A6 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		8E3A50BD2838C8F700E9F2A6 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A50C12838C95800E9F2A6 /* Home.storyboard */,
+				8E3A50C92838C9CF00E9F2A6 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		8E3A50BE2838C8FE00E9F2A6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A50C32838C96500E9F2A6 /* Search.storyboard */,
+				8E3A50CB2838CA6B00E9F2A6 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		8E3A50BF2838C90800E9F2A6 /* Alarm */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A50C52838C97200E9F2A6 /* Alarm.storyboard */,
+				8E3A50CD2838CAFC00E9F2A6 /* AlarmViewController.swift */,
+			);
+			path = Alarm;
+			sourceTree = "<group>";
+		};
+		8E3A50C02838C91300E9F2A6 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				8E3A50C72838C97C00E9F2A6 /* Profile.storyboard */,
+				8E3A50CF2838CB2400E9F2A6 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		B7BF26128BA5DFB96CFE3DCD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */,
+				E83AB9505507D32B4BBFEDB8 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework */,
+				1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8E3A50882838C73000E9F2A6 /* iMAC-Torip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E3A50B32838C73600E9F2A6 /* Build configuration list for PBXNativeTarget "iMAC-Torip" */;
+			buildPhases = (
+				6F9024622B9236B6DDF8DC1A /* [CP] Check Pods Manifest.lock */,
+				8E3A50852838C73000E9F2A6 /* Sources */,
+				8E3A50862838C73000E9F2A6 /* Frameworks */,
+				8E3A50872838C73000E9F2A6 /* Resources */,
+				16351E6B81D39791FB9C2AAA /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iMAC-Torip";
+			productName = "iMAC-Torip";
+			productReference = 8E3A50892838C73000E9F2A6 /* iMAC-Torip.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8E3A509E2838C73600E9F2A6 /* iMAC-ToripTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E3A50B62838C73600E9F2A6 /* Build configuration list for PBXNativeTarget "iMAC-ToripTests" */;
+			buildPhases = (
+				3BCB0288B34DBFE7E1D007DD /* [CP] Check Pods Manifest.lock */,
+				8E3A509B2838C73600E9F2A6 /* Sources */,
+				8E3A509C2838C73600E9F2A6 /* Frameworks */,
+				8E3A509D2838C73600E9F2A6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E3A50A12838C73600E9F2A6 /* PBXTargetDependency */,
+			);
+			name = "iMAC-ToripTests";
+			productName = "iMAC-ToripTests";
+			productReference = 8E3A509F2838C73600E9F2A6 /* iMAC-ToripTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8E3A50A82838C73600E9F2A6 /* iMAC-ToripUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E3A50B92838C73600E9F2A6 /* Build configuration list for PBXNativeTarget "iMAC-ToripUITests" */;
+			buildPhases = (
+				120DF5DF366C9BEE7139BFD4 /* [CP] Check Pods Manifest.lock */,
+				8E3A50A52838C73600E9F2A6 /* Sources */,
+				8E3A50A62838C73600E9F2A6 /* Frameworks */,
+				8E3A50A72838C73600E9F2A6 /* Resources */,
+				8C7D2B253DB5591B7B34DC6A /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8E3A50AB2838C73600E9F2A6 /* PBXTargetDependency */,
+			);
+			name = "iMAC-ToripUITests";
+			productName = "iMAC-ToripUITests";
+			productReference = 8E3A50A92838C73600E9F2A6 /* iMAC-ToripUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8E3A50812838C73000E9F2A6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					8E3A50882838C73000E9F2A6 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					8E3A509E2838C73600E9F2A6 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 8E3A50882838C73000E9F2A6;
+					};
+					8E3A50A82838C73600E9F2A6 = {
+						CreatedOnToolsVersion = 13.4;
+						TestTargetID = 8E3A50882838C73000E9F2A6;
+					};
+				};
+			};
+			buildConfigurationList = 8E3A50842838C73000E9F2A6 /* Build configuration list for PBXProject "iMAC-Torip" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8E3A50802838C73000E9F2A6;
+			productRefGroup = 8E3A508A2838C73000E9F2A6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8E3A50882838C73000E9F2A6 /* iMAC-Torip */,
+				8E3A509E2838C73600E9F2A6 /* iMAC-ToripTests */,
+				8E3A50A82838C73600E9F2A6 /* iMAC-ToripUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8E3A50872838C73000E9F2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3A50C62838C97200E9F2A6 /* Alarm.storyboard in Resources */,
+				8E3A50992838C73500E9F2A6 /* LaunchScreen.storyboard in Resources */,
+				8E3A50962838C73500E9F2A6 /* Assets.xcassets in Resources */,
+				8E3A50942838C73000E9F2A6 /* Main.storyboard in Resources */,
+				8E3A50C22838C95800E9F2A6 /* Home.storyboard in Resources */,
+				8E3A50C82838C97C00E9F2A6 /* Profile.storyboard in Resources */,
+				8E3A50C42838C96500E9F2A6 /* Search.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E3A509D2838C73600E9F2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E3A50A72838C73600E9F2A6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		120DF5DF366C9BEE7139BFD4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iMAC-Torip-iMAC-ToripUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		16351E6B81D39791FB9C2AAA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMAC-Torip/Pods-iMAC-Torip-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMAC-Torip/Pods-iMAC-Torip-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iMAC-Torip/Pods-iMAC-Torip-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3BCB0288B34DBFE7E1D007DD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iMAC-ToripTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6F9024622B9236B6DDF8DC1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-iMAC-Torip-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C7D2B253DB5591B7B34DC6A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8E3A50852838C73000E9F2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
+				8E3A50912838C73000E9F2A6 /* ViewController.swift in Sources */,
+				8E3A50CE2838CAFC00E9F2A6 /* AlarmViewController.swift in Sources */,
+				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
+				8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */,
+				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
+				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E3A509B2838C73600E9F2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3A50A42838C73600E9F2A6 /* iMAC_ToripTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8E3A50A52838C73600E9F2A6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8E3A50AE2838C73600E9F2A6 /* iMAC_ToripUITests.swift in Sources */,
+				8E3A50B02838C73600E9F2A6 /* iMAC_ToripUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8E3A50A12838C73600E9F2A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E3A50882838C73000E9F2A6 /* iMAC-Torip */;
+			targetProxy = 8E3A50A02838C73600E9F2A6 /* PBXContainerItemProxy */;
+		};
+		8E3A50AB2838C73600E9F2A6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8E3A50882838C73000E9F2A6 /* iMAC-Torip */;
+			targetProxy = 8E3A50AA2838C73600E9F2A6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8E3A50922838C73000E9F2A6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E3A50932838C73000E9F2A6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8E3A50972838C73500E9F2A6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8E3A50982838C73500E9F2A6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8E3A50B12838C73600E9F2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		8E3A50B22838C73600E9F2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.7;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8E3A50B42838C73600E9F2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3ABC8514FE890D1220889059 /* Pods-iMAC-Torip.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2Z4ZN37P4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iMAC-Torip/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Develop.iMAC-Torip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8E3A50B52838C73600E9F2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A564B95EE2441A1765B8D939 /* Pods-iMAC-Torip.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2Z4ZN37P4;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "iMAC-Torip/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Develop.iMAC-Torip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		8E3A50B72838C73600E9F2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 58880E68ECD70A16DC5B5959 /* Pods-iMAC-ToripTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2Z4ZN37P4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Develop.iMAC-ToripTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMAC-Torip.app/iMAC-Torip";
+			};
+			name = Debug;
+		};
+		8E3A50B82838C73600E9F2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0B45B7E7A3AA74CC229B2A15 /* Pods-iMAC-ToripTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2Z4ZN37P4;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Develop.iMAC-ToripTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iMAC-Torip.app/iMAC-Torip";
+			};
+			name = Release;
+		};
+		8E3A50BA2838C73600E9F2A6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E18CF7CB332905979D2B44A4 /* Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2Z4ZN37P4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Develop.iMAC-ToripUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iMAC-Torip";
+			};
+			name = Debug;
+		};
+		8E3A50BB2838C73600E9F2A6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D85E101497FCDE20AE2FA068 /* Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = J2Z4ZN37P4;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "Develop.iMAC-ToripUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "iMAC-Torip";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8E3A50842838C73000E9F2A6 /* Build configuration list for PBXProject "iMAC-Torip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E3A50B12838C73600E9F2A6 /* Debug */,
+				8E3A50B22838C73600E9F2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E3A50B32838C73600E9F2A6 /* Build configuration list for PBXNativeTarget "iMAC-Torip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E3A50B42838C73600E9F2A6 /* Debug */,
+				8E3A50B52838C73600E9F2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E3A50B62838C73600E9F2A6 /* Build configuration list for PBXNativeTarget "iMAC-ToripTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E3A50B72838C73600E9F2A6 /* Debug */,
+				8E3A50B82838C73600E9F2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E3A50B92838C73600E9F2A6 /* Build configuration list for PBXNativeTarget "iMAC-ToripUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8E3A50BA2838C73600E9F2A6 /* Debug */,
+				8E3A50BB2838C73600E9F2A6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8E3A50812838C73000E9F2A6 /* Project object */;
+}
