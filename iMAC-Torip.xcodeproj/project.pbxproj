@@ -30,6 +30,16 @@
 		8E3A50D52838D72F00E9F2A6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50D32838D72F00E9F2A6 /* HomeTableViewCell.swift */; };
 		8E3A50D62838D72F00E9F2A6 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50D42838D72F00E9F2A6 /* HomeTableViewCell.xib */; };
 		D53D321D43337A57E5DC4FF1 /* Pods_iMAC_ToripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */; };
+		E92A3FB32838DBD8009DF54C /* DetailInquiryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A3FB22838DBD8009DF54C /* DetailInquiryViewModel.swift */; };
+		E92A3FB72838DD6F009DF54C /* DetailInquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A3FB62838DD6F009DF54C /* DetailInquiryViewController.swift */; };
+		E92A3FBB2838E229009DF54C /* TravelRouteCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A3FB92838E229009DF54C /* TravelRouteCollectionViewCell.swift */; };
+		E92A3FBC2838E229009DF54C /* TravelRouteCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92A3FBA2838E229009DF54C /* TravelRouteCollectionViewCell.xib */; };
+		E92A3FBF2838ECE4009DF54C /* ParticipantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A3FBD2838ECE4009DF54C /* ParticipantTableViewCell.swift */; };
+		E92A3FC02838ECE4009DF54C /* ParticipantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92A3FBE2838ECE4009DF54C /* ParticipantTableViewCell.xib */; };
+		E92A3FC228390C58009DF54C /* DetailInquiry.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A3FC128390C58009DF54C /* DetailInquiry.swift */; };
+		E92A3FC728391D3D009DF54C /* TravelRouteArrowCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A3FC528391D3D009DF54C /* TravelRouteArrowCollectionViewCell.swift */; };
+		E92A3FC828391D3D009DF54C /* TravelRouteArrowCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E92A3FC628391D3D009DF54C /* TravelRouteArrowCollectionViewCell.xib */; };
+		E9497A2228393F720089CC68 /* TravelRouteCollectionReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9497A2128393F720089CC68 /* TravelRouteCollectionReusableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,6 +93,16 @@
 		D85E101497FCDE20AE2FA068 /* Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E18CF7CB332905979D2B44A4 /* Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		E83AB9505507D32B4BBFEDB8 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_Torip_iMAC_ToripUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E92A3FB22838DBD8009DF54C /* DetailInquiryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInquiryViewModel.swift; sourceTree = "<group>"; };
+		E92A3FB62838DD6F009DF54C /* DetailInquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInquiryViewController.swift; sourceTree = "<group>"; };
+		E92A3FB92838E229009DF54C /* TravelRouteCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRouteCollectionViewCell.swift; sourceTree = "<group>"; };
+		E92A3FBA2838E229009DF54C /* TravelRouteCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelRouteCollectionViewCell.xib; sourceTree = "<group>"; };
+		E92A3FBD2838ECE4009DF54C /* ParticipantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParticipantTableViewCell.swift; sourceTree = "<group>"; };
+		E92A3FBE2838ECE4009DF54C /* ParticipantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ParticipantTableViewCell.xib; sourceTree = "<group>"; };
+		E92A3FC128390C58009DF54C /* DetailInquiry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailInquiry.swift; sourceTree = "<group>"; };
+		E92A3FC528391D3D009DF54C /* TravelRouteArrowCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRouteArrowCollectionViewCell.swift; sourceTree = "<group>"; };
+		E92A3FC628391D3D009DF54C /* TravelRouteArrowCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TravelRouteArrowCollectionViewCell.xib; sourceTree = "<group>"; };
+		E9497A2128393F720089CC68 /* TravelRouteCollectionReusableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TravelRouteCollectionReusableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +217,10 @@
 				8E3A50C12838C95800E9F2A6 /* Home.storyboard */,
 				8E3A50C92838C9CF00E9F2A6 /* HomeViewController.swift */,
 				8E3A50D12838D6A700E9F2A6 /* HomeViewModel.swift */,
+				E92A3FC128390C58009DF54C /* DetailInquiry.swift */,
+				E92A3FB22838DBD8009DF54C /* DetailInquiryViewModel.swift */,
+				E92A3FB62838DD6F009DF54C /* DetailInquiryViewController.swift */,
+				E92A3FB82838E20E009DF54C /* Cell */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -238,6 +262,20 @@
 				1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E92A3FB82838E20E009DF54C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				E92A3FB92838E229009DF54C /* TravelRouteCollectionViewCell.swift */,
+				E92A3FBA2838E229009DF54C /* TravelRouteCollectionViewCell.xib */,
+				E92A3FBD2838ECE4009DF54C /* ParticipantTableViewCell.swift */,
+				E92A3FBE2838ECE4009DF54C /* ParticipantTableViewCell.xib */,
+				E92A3FC528391D3D009DF54C /* TravelRouteArrowCollectionViewCell.swift */,
+				E92A3FC628391D3D009DF54C /* TravelRouteArrowCollectionViewCell.xib */,
+				E9497A2128393F720089CC68 /* TravelRouteCollectionReusableView.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -350,10 +388,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E3A50C62838C97200E9F2A6 /* Alarm.storyboard in Resources */,
+				E92A3FC02838ECE4009DF54C /* ParticipantTableViewCell.xib in Resources */,
+				E92A3FC828391D3D009DF54C /* TravelRouteArrowCollectionViewCell.xib in Resources */,
 				8E3A50992838C73500E9F2A6 /* LaunchScreen.storyboard in Resources */,
 				8E3A50D62838D72F00E9F2A6 /* HomeTableViewCell.xib in Resources */,
 				8E3A50962838C73500E9F2A6 /* Assets.xcassets in Resources */,
 				8E3A50942838C73000E9F2A6 /* Main.storyboard in Resources */,
+				E92A3FBC2838E229009DF54C /* TravelRouteCollectionViewCell.xib in Resources */,
 				8E3A50C22838C95800E9F2A6 /* Home.storyboard in Resources */,
 				8E3A50C82838C97C00E9F2A6 /* Profile.storyboard in Resources */,
 				8E3A50C42838C96500E9F2A6 /* Search.storyboard in Resources */,
@@ -484,14 +525,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E92A3FC728391D3D009DF54C /* TravelRouteArrowCollectionViewCell.swift in Sources */,
+				E92A3FC228390C58009DF54C /* DetailInquiry.swift in Sources */,
 				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
+				E92A3FB72838DD6F009DF54C /* DetailInquiryViewController.swift in Sources */,
+				E92A3FBB2838E229009DF54C /* TravelRouteCollectionViewCell.swift in Sources */,
 				8E3A50912838C73000E9F2A6 /* ViewController.swift in Sources */,
 				8E3A50CE2838CAFC00E9F2A6 /* AlarmViewController.swift in Sources */,
 				8E3A50D22838D6A700E9F2A6 /* HomeViewModel.swift in Sources */,
 				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
+				E9497A2228393F720089CC68 /* TravelRouteCollectionReusableView.swift in Sources */,
 				8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */,
+				E92A3FBF2838ECE4009DF54C /* ParticipantTableViewCell.swift in Sources */,
 				8E3A50D52838D72F00E9F2A6 /* HomeTableViewCell.swift in Sources */,
 				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
+				E92A3FB32838DBD8009DF54C /* DetailInquiryViewModel.swift in Sources */,
 				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
