@@ -73,6 +73,7 @@ class DetailViewController: UIViewController {
         area = ["서울", "제주", "부산", "경기", "인천", "대전", "대구", "광주", "충북", "강원", "전남", "전북", "경남", "경북", "울산", "충남"]
         configureAreaDataSource()
        // areaCollectionView.collectionViewLayout = createLayout()
+        areaCollectionView.delegate = self
         
         profileImageView.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
@@ -93,8 +94,8 @@ class DetailViewController: UIViewController {
     func configureAreaDataSource() {
         areaCollectionView.register(AreaCollectionViewCell.self, forCellWithReuseIdentifier: AreaCollectionViewCell.identifier)
         areaDataSource = UICollectionViewDiffableDataSource<Section, String>(collectionView: self.areaCollectionView) { (collectionView, indexPath, str) -> UICollectionViewCell? in let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AreaCollectionViewCell.identifier, for: indexPath) as! AreaCollectionViewCell
-            cell.titleLabel.text = "\(str)"
-            cell.titleLabel.layer.cornerRadius = 5
+            cell.titleButton.setTitle( "\(str)", for: .normal)
+            cell.titleButton.layer.cornerRadius = 5
             return cell
         }
         
@@ -113,7 +114,6 @@ class DetailViewController: UIViewController {
     func collectionviewSetting(){
         placeCollectionView.dataSource = self
         placeCollectionView.delegate = self
-        
 //        let flowLayout = UICollectionViewFlowLayout()
 //        placeCollectionView.collectionViewLayout = flowLayout
 //                flowLayout.minimumInteritemSpacing = 0
@@ -143,9 +143,6 @@ class DetailViewController: UIViewController {
         userCount.wraps = true
         userCount.autorepeat = true
         userCount.maximumValue = 5
-    }
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.view.endEditing(true)
     }
     
     @objc func touch(sender: UITapGestureRecognizer) {
@@ -192,15 +189,30 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(indexPath)
-        self.present(PostCodeInputViewController(), animated: true)
+//        print(indexPath)
+//        self.present(PostCodeInputViewController(), animated: true)
         
-//        if indexPath.row == 0 {
-//            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostCodeInputViewController") as! PostCodeInputViewController
-//            self.navigationController?.pushViewController(vc, animated: true)
-//        }
+        if indexPath.row == 0 && collectionView == placeCollectionView {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostCodeInputViewController") as! PostCodeInputViewController
+            self.navigationController?.pushViewController(vc, animated: true)
+        }else {
+
+            let item = collectionView.cellForItem(at: indexPath) as! AreaCollectionViewCell
+            item.titleButton.setTitleColor(.blue, for: .normal)
+
+        }
        
     }
+    
+//    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+//        print("desele")
+//        if collectionView == areaCollectionView {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: AreaCollectionViewCell.identifier, for: indexPath) as! AreaCollectionViewCell
+//            cell.titleLabel.textColor = .gray
+//        }
+//    }
+    
+    
 
 }
 
@@ -211,8 +223,11 @@ extension DetailViewController: UICollectionViewDelegateFlowLayout {
             let itemsPerRow: CGFloat = 3
             let widthPadding = sectionInsets.left * (itemsPerRow + 1)
             let cellWidth = (width - widthPadding) / itemsPerRow
-            
-            return CGSize(width: cellWidth, height: cellWidth)
+            if collectionView == placeCollectionView {
+                return CGSize(width: cellWidth, height: cellWidth)
+            }
+        return CGSize(width: 80, height: 30)
+           
         }
         
     func collectionView(_ collectionView: UICollectionView,

@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RxSwift
 import RxCocoa
+import SDWebImage
 
 class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
@@ -17,37 +18,36 @@ class HomeViewController: UIViewController {
         self.goToWrite()
     }
     let disposeBag = DisposeBag()
-    var dataSource: UITableViewDiffableDataSource<Int, HomeCell>! = nil
-    var currentSnapshot: NSDiffableDataSourceSnapshot<Int, HomeCell>! = nil
-    var list = [HomeCell(imageURL: "", title: "1", date: "d", count: 1), HomeCell(imageURL: "", title: "2", date: "c", count: 2)]
+    var dataSource: UITableViewDiffableDataSource<Int, GetPosts>! = nil
+    var currentSnapshot: NSDiffableDataSourceSnapshot<Int, GetPosts>! = nil
+ 
     var viewModel: HomeViewModel?
     private var section = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureDataSource()
-        viewModel = HomeViewModel(list: list)
-        viewModel?.list = list
+        viewModel = HomeViewModel()
         floatingButton.makeCircleShape()
         tableView.delegate = self
     }
     
     private func configureDataSource() {
         tableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
-        dataSource = UITableViewDiffableDataSource<Int, HomeCell>(tableView: tableView) { (tableView, indexPath, item) -> HomeTableViewCell? in let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
-            cell.titleLabel.text = item.title
-            cell.placeLabel.text = item.date
-            cell.palceImageView.image = UIImage(systemName: "heart.fill")
-            cell.countButton.setTitle("\(item.count)명", for: .normal)
+        dataSource = UITableViewDiffableDataSource<Int, GetPosts>(tableView: tableView) { (tableView, indexPath, item) -> HomeTableViewCell? in let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
+            cell.titleLabel.text = item.region
+            cell.placeLabel.text = "\(item.start) 부터 \(item.end)까지"
+            cell.palceImageView.sd_setImage(with: URL(string: item.image))
+            cell.countButton.setTitle("\(item.participants)명", for: .normal)
             return cell
         }
         dataSource.defaultRowAnimation = .fade
         tableView.dataSource = dataSource
         // 빈 snapshot
-        var snapshot = NSDiffableDataSourceSnapshot<Int, HomeCell>()
+        var snapshot = NSDiffableDataSourceSnapshot<Int, GetPosts>()
         snapshot.appendSections([section])
         section += 1
-        snapshot.appendItems(list)
+        snapshot.appendItems(viewModel?.list ?? [])
         dataSource.apply(snapshot)
     }
     
@@ -57,11 +57,11 @@ class HomeViewController: UIViewController {
     }
     
     func performQuery(with filter: String?) {
-        let filtered = list.filter { ($0.title.hasPrefix(filter ?? "" ))}
-        print(filtered)
-        var snapshot = NSDiffableDataSourceSnapshot<Int, HomeCell>()
+        let filtered = viewModel?.list.filter { ($0.region.hasPrefix(filter ?? "" ))}
+
+        var snapshot = NSDiffableDataSourceSnapshot<Int, GetPosts>()
         snapshot.appendSections([section])
-        snapshot.appendItems(filtered)
+        snapshot.appendItems(filtered ?? [])
         dataSource.apply(snapshot, animatingDifferences: true)
     }
     
@@ -85,7 +85,7 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let list = list[indexPath.row]
+        let list = viewModel!.list[indexPath.row]
         self.goToDetail(item: list)
     }
 }
@@ -105,7 +105,7 @@ extension HomeViewController {
         self.tabBarController?.hidesBottomBarWhenPushed = true
     }
     
-    func goToDetail(item: HomeCell) {
+    func goToDetail(item: GetPosts) {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let detailVC = storyBoard.instantiateViewController(withIdentifier: "DetailInquiryViewController") as! DetailInquiryViewController
         //detailVC.item = item

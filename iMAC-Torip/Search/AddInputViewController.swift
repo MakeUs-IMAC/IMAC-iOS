@@ -35,10 +35,11 @@ class AddInputViewController: UIViewController {
         doneButton.rx.tap
             .subscribe(onNext: { _ in
                 //to do data 전달
+                //let rootView =  self.presentingViewController?.presentingViewController as? DetailViewController
+              
+                  // rootView!.item.append((self.titleTextField.text!, self.addressTextField.text!))
                 self.dismiss(animated: true)
-                let vc = self.storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-                vc.item.append((self.titleTextField.text!, self.addressTextField.text!))
-                self.navigationController?.pushViewController(vc, animated: true)
+//                print(self.presentingViewController.presen)
             }).disposed(by: disposeBag)
     }
 }

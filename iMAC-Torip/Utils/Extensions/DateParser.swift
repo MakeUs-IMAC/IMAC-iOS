@@ -8,8 +8,9 @@
 import Foundation
 import UIKit
 
-extension Date {
-    func date(string: String) -> Date {
+class DateUtil {
+    
+    static func parserTodate(string: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-ddZHH:mm:ss.SSSZ"
         return dateFormatter.date(from: string)!

@@ -11,9 +11,9 @@ import RxCocoa
 import Moya
 class HomeViewModel {
     let disposeBag = DisposeBag()
-    var list: [GetPosts]?
+    var list: [GetPosts] = []
     let provider = MoyaProvider<PostAPI>()
-    let userId = UserDefaults.standard.string(forKey: "id")
+    let userId = UserDefaults.standard.integer(forKey: "id")
     struct Input {
         let viewWillAppearEvent: Observable<Void>
         let floatingButton: Observable<Void>
@@ -24,10 +24,6 @@ class HomeViewModel {
         let goToDetailCell = PublishSubject<GetPosts>()
     }
     
-    init() {
-        getPosts()
-    }
-    
     
     
     func transform(from input: Input, disposeBag: DisposeBag) -> Output {
@@ -35,6 +31,7 @@ class HomeViewModel {
         input.viewWillAppearEvent
             .subscribe(onNext: {
                 //get info
+                self.getPosts()
             }).disposed(by: disposeBag)
         
         input.cellDidTap.subscribe(onNext: { index in
@@ -46,12 +43,12 @@ class HomeViewModel {
     }
     
     func getPosts(){
-        self.provider.rx.request(.getPost(userId: Int(userId!)!))
+        self.provider.rx.request(.getPost(userId: userId))
             .filterSuccessfulStatusCodes()
-            .map(GetPosts.self)
+            .map([GetPosts].self)
             .asObservable()
             .subscribe(onNext: { item in
-               list = item
+                self.list = item
                 
                 //self.list = item
             }).disposed(by: disposeBag)

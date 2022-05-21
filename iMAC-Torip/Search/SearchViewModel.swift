@@ -7,10 +7,13 @@
 
 import Foundation
 import RxSwift
+import Moya
 
 class SearchViewModel {
     let disposeBag = DisposeBag()
-    var list: [GetPosts]
+    var list: [GetPosts] = []
+    let provider = MoyaProvider<PostAPI>()
+    let userId = UserDefaults.standard.integer(forKey: "id")
     struct Input {
         let viewWillAppearEvent: Observable<Void>
         let textBeginChanging: Observable<Void>
@@ -22,17 +25,12 @@ class SearchViewModel {
         let goToDetailCell = PublishSubject<GetPosts>()
     }
     
-    init() {
-      getPosts()
-    }
-    
-    
-    
     func transform(from input: Input, disposeBag: DisposeBag) -> Output {
         let output = Output()
         input.viewWillAppearEvent
             .subscribe(onNext: {
                 //get info
+                self.getPosts()
             }).disposed(by: disposeBag)
         
         input.cellDidTap.subscribe(onNext: { index in
@@ -41,6 +39,17 @@ class SearchViewModel {
         }).disposed(by: disposeBag)
         
         return output
+    }
+    
+    func getPosts(){
+        self.provider.rx.request(.getPost(userId: userId))
+            .filterSuccessfulStatusCodes()
+            .map([GetPosts].self)
+            .asObservable()
+            .subscribe(onNext: { item in
+                self.list = item
+            }).disposed(by: disposeBag)
+        
     }
     
 }
