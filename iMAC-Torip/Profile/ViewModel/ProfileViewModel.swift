@@ -10,6 +10,14 @@ import SwiftUI
 import Moya
 
 class ProfileViewModel: ObservableObject{
+    var nickname = ""
+    var contract = ""
+    var role: UserRole = .traveler
+    var gender: Gender = .male
+    var age: Age = .teen
+    var carType: CarType = .compactCar
+   
+    
     private var profile: ProfileResponse.Result? = nil
     
     func checkPresenceOfProfile(completion: ((Bool, Error?) -> Void)? = nil){

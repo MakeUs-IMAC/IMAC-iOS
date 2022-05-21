@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct ProfileFormView: View {
+    @EnvironmentObject private var viewModel: ProfileViewModel
+    
     @State private var nickname = ""
     @State private var contract = ""
     @State private var roleTag = 0
     @State private var genderTag = 0
-    @State private var age: Age = .teen
-    @State private var carType: CarType = .compactCar
-    
+    @State private var ageTag = 0
+    @State private var carTypeTag = 0
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
@@ -31,12 +32,20 @@ struct ProfileFormView: View {
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
+                .onChange(of: roleTag){
+                    viewModel.role = UserRole.allCases[$0]
+                }
                 
                 //공통된 입력
                 TextField("닉네임", text: $nickname)
                     .textFieldStyle(.roundedBorder)
+                    .onChange(of: nickname){
+                        viewModel.nickname = $0
+                    }
                 TextField("연락처", text: $contract)
-                    .textFieldStyle(.roundedBorder)
+                    .textFieldStyle(.roundedBorder).onChange(of: contract){
+                        viewModel.contract = $0
+                    }
                 
                 if UserRole.allCases[roleTag] == UserRole.traveler {
                     //여행자일 때
@@ -46,25 +55,34 @@ struct ProfileFormView: View {
                         }
                     }
                     .pickerStyle(SegmentedPickerStyle())
+                    .onChange(of: genderTag){
+                        viewModel.gender = Gender.allCases[$0]
+                    }
                     
-                    Picker("", selection: $age){
+                    Picker("", selection: $ageTag){
                         ForEach(0 ..< Age.allCases.count){
-                            Text("\(Age.allCases[$0].rawValue)대")
+                            Text("\(Age.allCases[$0].rawValue)대").tag($0)
                         }
                     }.pickerStyle(.wheel)
                         .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray.opacity(0.15), lineWidth: 1))
+                        .onChange(of: ageTag){
+                            viewModel.age = Age.allCases[$0]
+                        }
                 }
                 else{
                     //기사일 때
-                    Picker("", selection: $carType){
+                    Picker("", selection: $carTypeTag){
                         ForEach(0 ..< CarType.allCases.count){
-                            Text("\(CarType.allCases[$0].rawValue)")
+                            Text("\(CarType.allCases[$0].rawValue)").tag($0)
                         }
                     }.pickerStyle(.wheel)
                         .background(RoundedRectangle(cornerRadius: 8).stroke(Color.gray.opacity(0.15), lineWidth: 1))
+                        .onChange(of: carTypeTag){
+                            viewModel.carType = CarType.allCases[$0]
+                        }
                 }
                 Button{
-                    
+                    print("\(viewModel.role) \(viewModel.nickname) \(viewModel.contract) \(viewModel.age) \(viewModel.carType)")
                 }label: {
                     Text("작성 완료")
                         .font(.system(size: 18, weight:.bold))
