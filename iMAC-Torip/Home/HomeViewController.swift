@@ -7,7 +7,19 @@
 
 import Foundation
 import UIKit
+import RxSwift
+import RxCocoa
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var tableView: UITableView!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        bindViewModel()
+    }
+    
+    private func bindViewModel() {
+        
+    }
     
 }

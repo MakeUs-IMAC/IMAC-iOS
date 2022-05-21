@@ -26,6 +26,9 @@
 		8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50CB2838CA6B00E9F2A6 /* SearchViewController.swift */; };
 		8E3A50CE2838CAFC00E9F2A6 /* AlarmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50CD2838CAFC00E9F2A6 /* AlarmViewController.swift */; };
 		8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50CF2838CB2400E9F2A6 /* ProfileViewController.swift */; };
+		8E3A50D22838D6A700E9F2A6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50D12838D6A700E9F2A6 /* HomeViewModel.swift */; };
+		8E3A50D52838D72F00E9F2A6 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50D32838D72F00E9F2A6 /* HomeTableViewCell.swift */; };
+		8E3A50D62838D72F00E9F2A6 /* HomeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E3A50D42838D72F00E9F2A6 /* HomeTableViewCell.xib */; };
 		D53D321D43337A57E5DC4FF1 /* Pods_iMAC_ToripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +76,9 @@
 		8E3A50CB2838CA6B00E9F2A6 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		8E3A50CD2838CAFC00E9F2A6 /* AlarmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlarmViewController.swift; sourceTree = "<group>"; };
 		8E3A50CF2838CB2400E9F2A6 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		8E3A50D12838D6A700E9F2A6 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		8E3A50D32838D72F00E9F2A6 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		8E3A50D42838D72F00E9F2A6 /* HomeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeTableViewCell.xib; sourceTree = "<group>"; };
 		A564B95EE2441A1765B8D939 /* Pods-iMAC-Torip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip/Pods-iMAC-Torip.release.xcconfig"; sourceTree = "<group>"; };
 		D85E101497FCDE20AE2FA068 /* Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E18CF7CB332905979D2B44A4 /* Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,7 +123,6 @@
 				58880E68ECD70A16DC5B5959 /* Pods-iMAC-ToripTests.debug.xcconfig */,
 				0B45B7E7A3AA74CC229B2A15 /* Pods-iMAC-ToripTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -191,6 +196,7 @@
 			children = (
 				8E3A50C12838C95800E9F2A6 /* Home.storyboard */,
 				8E3A50C92838C9CF00E9F2A6 /* HomeViewController.swift */,
+				8E3A50D12838D6A700E9F2A6 /* HomeViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -198,6 +204,8 @@
 		8E3A50BE2838C8FE00E9F2A6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				8E3A50D32838D72F00E9F2A6 /* HomeTableViewCell.swift */,
+				8E3A50D42838D72F00E9F2A6 /* HomeTableViewCell.xib */,
 				8E3A50C32838C96500E9F2A6 /* Search.storyboard */,
 				8E3A50CB2838CA6B00E9F2A6 /* SearchViewController.swift */,
 			);
@@ -343,6 +351,7 @@
 			files = (
 				8E3A50C62838C97200E9F2A6 /* Alarm.storyboard in Resources */,
 				8E3A50992838C73500E9F2A6 /* LaunchScreen.storyboard in Resources */,
+				8E3A50D62838D72F00E9F2A6 /* HomeTableViewCell.xib in Resources */,
 				8E3A50962838C73500E9F2A6 /* Assets.xcassets in Resources */,
 				8E3A50942838C73000E9F2A6 /* Main.storyboard in Resources */,
 				8E3A50C22838C95800E9F2A6 /* Home.storyboard in Resources */,
@@ -478,8 +487,10 @@
 				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
 				8E3A50912838C73000E9F2A6 /* ViewController.swift in Sources */,
 				8E3A50CE2838CAFC00E9F2A6 /* AlarmViewController.swift in Sources */,
+				8E3A50D22838D6A700E9F2A6 /* HomeViewModel.swift in Sources */,
 				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
 				8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */,
+				8E3A50D52838D72F00E9F2A6 /* HomeTableViewCell.swift in Sources */,
 				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
 				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
 			);
