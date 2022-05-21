@@ -58,9 +58,14 @@ extension LoginWebView.Coordinator: WKNavigationDelegate{
             let queryStartIndex = url.index(after: url.firstIndex(of: "?")!)
             let queryString = url[queryStartIndex...]
             let queries = queryString.split(separator: "&")
+           
             let jwtQuery = queries[0]
+            let idQuery = queries[1]
             let jwt = jwtQuery[url.index(after: jwtQuery.firstIndex(of: "=")!)...]
+            let id = idQuery[url.index(after: jwtQuery.firstIndex(of: "=")!)...]
             UserDefaults.standard.setValue(jwt, forKey: "token")
+            UserDefaults.standard.setValue(jwt, forKey: "id")
+            
             dismiss()
             return
         }
