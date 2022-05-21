@@ -12,7 +12,7 @@ import RxSwift
 
 class CalendarViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
-    @IBOutlet weak var nextButton: UIButton!
+    //@IBOutlet weak var nextButton: UIButton!
     var monthList = [Int]()
     
     let disposeBag = DisposeBag()
@@ -52,10 +52,10 @@ class CalendarViewController: UIViewController {
     }
     
     func bindViewModel() {
-        nextButton.rx.tap
-            .subscribe(onNext: { _ in
-                self.navigateToDetailVC()
-            }).disposed(by: disposeBag)
+//        nextButton.rx.tap
+//            .subscribe(onNext: { _ in
+//                self.navigateToDetailVC()
+//            }).disposed(by: disposeBag)
     }
     
     func dateFormatter(getDate: Date) {
