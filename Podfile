@@ -13,7 +13,8 @@ pod 'Moya', '~> 15.0'
 pod 'Moya/RxSwift', '~> 15.0'
 
 pod 'FSCalendar'
-  target 'iMAC-ToripTests' do
+
+target 'iMAC-ToripTests' do
     inherit! :search_paths
     # Pods for testing
   end

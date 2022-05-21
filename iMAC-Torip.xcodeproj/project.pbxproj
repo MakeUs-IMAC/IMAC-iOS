@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		069610FD2839480F00FCB7AC /* SnsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 069610FC2839480F00FCB7AC /* SnsLogin.swift */; };
+		06A486732838D68F0066F8CE /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A486722838D68F0066F8CE /* LoginView.swift */; };
+		06A486762838D80C0066F8CE /* LoginVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A486752838D80C0066F8CE /* LoginVIewController.swift */; };
+		06A486782838DE400066F8CE /* TabBarViewUIRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A486772838DE400066F8CE /* TabBarViewUIRepresentable.swift */; };
+		06A4867B2838E0BE0066F8CE /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A4867A2838E0BE0066F8CE /* Color + Extension.swift */; };
+		06A48682283932EE0066F8CE /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06A48681283932EE0066F8CE /* LoginWebView.swift */; };
 		492F0C46C55A837C23275150 /* Pods_iMAC_Torip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */; };
 		5657FAFAF7194038BCCE2B87 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83AB9505507D32B4BBFEDB8 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework */; };
 		8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A508C2838C73000E9F2A6 /* AppDelegate.swift */; };
@@ -47,6 +53,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		069610FC2839480F00FCB7AC /* SnsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnsLogin.swift; sourceTree = "<group>"; };
+		06A486722838D68F0066F8CE /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		06A486752838D80C0066F8CE /* LoginVIewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
+		06A486772838DE400066F8CE /* TabBarViewUIRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewUIRepresentable.swift; sourceTree = "<group>"; };
+		06A4867A2838E0BE0066F8CE /* Color + Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
+		06A48681283932EE0066F8CE /* LoginWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
 		0B45B7E7A3AA74CC229B2A15 /* Pods-iMAC-ToripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-ToripTests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-ToripTests/Pods-iMAC-ToripTests.release.xcconfig"; sourceTree = "<group>"; };
 		0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_Torip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_ToripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,8 +129,51 @@
 				58880E68ECD70A16DC5B5959 /* Pods-iMAC-ToripTests.debug.xcconfig */,
 				0B45B7E7A3AA74CC229B2A15 /* Pods-iMAC-ToripTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		069610FB283947FC00FCB7AC /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				069610FC2839480F00FCB7AC /* SnsLogin.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		06A4866D2838D4860066F8CE /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				069610FB283947FC00FCB7AC /* Enum */,
+				06A486742838D6930066F8CE /* View */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		06A486742838D6930066F8CE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06A486722838D68F0066F8CE /* LoginView.swift */,
+				06A486752838D80C0066F8CE /* LoginVIewController.swift */,
+				06A48681283932EE0066F8CE /* LoginWebView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06A486792838E08F0066F8CE /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				06A486772838DE400066F8CE /* TabBarViewUIRepresentable.swift */,
+				06A4867C2838E0CE0066F8CE /* Extension */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		06A4867C2838E0CE0066F8CE /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				06A4867A2838E0BE0066F8CE /* Color + Extension.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		8E3A50802838C73000E9F2A6 = {
@@ -146,11 +201,12 @@
 		8E3A508B2838C73000E9F2A6 /* iMAC-Torip */ = {
 			isa = PBXGroup;
 			children = (
+				06A486792838E08F0066F8CE /* Utils */,
+				06A4866D2838D4860066F8CE /* Login */,
 				8E3A50C02838C91300E9F2A6 /* Profile */,
 				8E3A50BF2838C90800E9F2A6 /* Alarm */,
 				8E3A50BE2838C8FE00E9F2A6 /* Search */,
 				8E3A50BD2838C8F700E9F2A6 /* Home */,
-				8E3A50BC2838C8EA00E9F2A6 /* Utils */,
 				8E3A508C2838C73000E9F2A6 /* AppDelegate.swift */,
 				8E3A508E2838C73000E9F2A6 /* SceneDelegate.swift */,
 				8E3A50902838C73000E9F2A6 /* ViewController.swift */,
@@ -177,13 +233,6 @@
 				8E3A50AF2838C73600E9F2A6 /* iMAC_ToripUITestsLaunchTests.swift */,
 			);
 			path = "iMAC-ToripUITests";
-			sourceTree = "<group>";
-		};
-		8E3A50BC2838C8EA00E9F2A6 /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		8E3A50BD2838C8F700E9F2A6 /* Home */ = {
@@ -476,11 +525,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
+				06A4867B2838E0BE0066F8CE /* Color + Extension.swift in Sources */,
 				8E3A50912838C73000E9F2A6 /* ViewController.swift in Sources */,
 				8E3A50CE2838CAFC00E9F2A6 /* AlarmViewController.swift in Sources */,
 				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
 				8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */,
+				06A486782838DE400066F8CE /* TabBarViewUIRepresentable.swift in Sources */,
+				069610FD2839480F00FCB7AC /* SnsLogin.swift in Sources */,
+				06A48682283932EE0066F8CE /* LoginWebView.swift in Sources */,
 				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
+				06A486762838D80C0066F8CE /* LoginVIewController.swift in Sources */,
+				06A486732838D68F0066F8CE /* LoginView.swift in Sources */,
 				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -659,7 +714,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J2Z4ZN37P4;
+				DEVELOPMENT_TEAM = 687R8W5T99;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iMAC-Torip/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -688,7 +743,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = J2Z4ZN37P4;
+				DEVELOPMENT_TEAM = 687R8W5T99;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "iMAC-Torip/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

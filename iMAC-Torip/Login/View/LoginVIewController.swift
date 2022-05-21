@@ -7,9 +7,10 @@
 
 import Foundation
 import SwiftUI
-class LoginViewController:UIViewController{
-   
-    @IBSegueAction func addSwiftUIView(_ coder: NSCoder) -> UIViewController?{
+
+//MARK: - LoginView를 호스팅 하기 위한 클래스
+final class LoginViewController:UIViewController{
+    @IBSegueAction func addSwiftUIVIew(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: LoginView())
     }
 }

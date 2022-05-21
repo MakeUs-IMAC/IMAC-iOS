@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="r6W-RW-ujX">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LBv-7P-jEm">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Tab Bar View Controller-->
         <scene sceneID="EXb-HH-Uo9">
             <objects>
-                <tabBarController id="r6W-RW-ujX" customClass="TabBarViewController" customModule="iMAC_Torip" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="r6W-RW-ujX" customClass="TabBarViewController" customModule="iMAC_Torip" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="IpK-Na-unu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pyZ-KV-I22">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -68,5 +70,47 @@
             </objects>
             <point key="canvasLocation" x="1402" y="54"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="m4j-am-nI6">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bTc-ut-Hkw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="LBv-7P-jEm" customClass="LoginViewController" customModule="iMAC_Torip" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3OX-xC-hHs">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kSr-WP-L8V">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <connections>
+                                    <segue destination="pT4-rO-bmk" kind="embed" destinationCreationSelector="addSwiftUIVIew:" id="FiC-NO-ULh"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="kfA-qp-3ad"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="kSr-WP-L8V" firstAttribute="top" secondItem="3OX-xC-hHs" secondAttribute="top" id="EQs-Lr-2gk"/>
+                            <constraint firstAttribute="bottom" secondItem="kSr-WP-L8V" secondAttribute="bottom" id="hnu-7u-0bD"/>
+                            <constraint firstItem="kSr-WP-L8V" firstAttribute="leading" secondItem="kfA-qp-3ad" secondAttribute="leading" id="kan-jQ-kUB"/>
+                            <constraint firstItem="kfA-qp-3ad" firstAttribute="trailing" secondItem="kSr-WP-L8V" secondAttribute="trailing" id="lwR-hf-oda"/>
+                        </constraints>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-571" y="73"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="PO1-sn-pnC">
+            <objects>
+                <hostingController id="pT4-rO-bmk" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDS-Qu-qMH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1374" y="-394"/>
+        </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

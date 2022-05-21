@@ -7,6 +7,8 @@
 
 import Foundation
 import SwiftUI
+
+//MARK: - TabBarViewController를 SwiftUI에 사용하기 위한 클래스
 struct TabBarViewUIRepresentable: UIViewControllerRepresentable{
     func makeUIViewController(context: Context) -> some UIViewController {
         return UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as! UITabBarController
@@ -16,5 +18,4 @@ struct TabBarViewUIRepresentable: UIViewControllerRepresentable{
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {
         
     }
-
 }
