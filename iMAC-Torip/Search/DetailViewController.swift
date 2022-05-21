@@ -8,22 +8,19 @@
 import UIKit
 
 class DetailViewController: UIViewController {
+    let area = ["서울", "제주", "부산", "경기", "인천", "대전", "대구", "광주", "충북", "강원", "전남", "전북", "경남", "경북", "울산", "충남"]
+    
+    @IBOutlet weak var areaCollectionView: UICollectionView!
+    @IBOutlet weak var placeCollectionView: UICollectionView!
+    let button: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = .gray
+        return button
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

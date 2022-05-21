@@ -36,6 +36,8 @@
 		8E3A50E12839152C00E9F2A6 /* AddInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50E02839152C00E9F2A6 /* AddInputViewModel.swift */; };
 		8E3A512228391E1B00E9F2A6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A512128391E1B00E9F2A6 /* CalendarViewController.swift */; };
 		8E3A51242839289800E9F2A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A51232839289800E9F2A6 /* DetailViewController.swift */; };
+		8E3A5126283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A5125283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift */; };
+		8E3A5128283937C000E9F2A6 /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */; };
 		D53D321D43337A57E5DC4FF1 /* Pods_iMAC_ToripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +95,8 @@
 		8E3A50E02839152C00E9F2A6 /* AddInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInputViewModel.swift; sourceTree = "<group>"; };
 		8E3A512128391E1B00E9F2A6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		8E3A51232839289800E9F2A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		8E3A5125283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		A564B95EE2441A1765B8D939 /* Pods-iMAC-Torip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip/Pods-iMAC-Torip.release.xcconfig"; sourceTree = "<group>"; };
 		D85E101497FCDE20AE2FA068 /* Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E18CF7CB332905979D2B44A4 /* Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -229,6 +233,8 @@
 				8E3A50E02839152C00E9F2A6 /* AddInputViewModel.swift */,
 				8E3A512128391E1B00E9F2A6 /* CalendarViewController.swift */,
 				8E3A51232839289800E9F2A6 /* DetailViewController.swift */,
+				8E3A5125283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift */,
+				8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -526,6 +532,8 @@
 				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
 				8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */,
 				8E3A50D82838D93500E9F2A6 /* SearchViewModel.swift in Sources */,
+				8E3A5126283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift in Sources */,
+				8E3A5128283937C000E9F2A6 /* PlaceCollectionViewCell.swift in Sources */,
 				8E3A50D52838D72F00E9F2A6 /* HomeTableViewCell.swift in Sources */,
 				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
 				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
