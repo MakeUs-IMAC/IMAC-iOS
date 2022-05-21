@@ -53,7 +53,32 @@ class HomeViewController: UIViewController {
     
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        self.view.endEditing(true) 
+    }
+    
+    func performQuery(with filter: String?) {
+        let filtered = list.filter { ($0.title.hasPrefix(filter ?? "" ))}
+        print(filtered)
+        var snapshot = NSDiffableDataSourceSnapshot<Int, HomeCell>()
+        snapshot.appendSections([section])
+        snapshot.appendItems(filtered)
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+    
+    func bindViewModel() {
+        let input = HomeViewModel.Input(viewWillAppearEvent: self.rx.methodInvoked(#selector(UIViewController.viewWillAppear)).map { _ in }, floatingButton: self.floatingButton.rx.tap.asObservable(), cellDidTap: self.tableView.rx.itemSelected.asObservable())
+
+        input.floatingButton
+            .subscribe(onNext: {
+                self.goToWrite()
+            }).disposed(by: disposeBag)
+        
+        let output = viewModel?.transform(from: input, disposeBag: viewModel?.disposeBag ?? self.disposeBag)
+        output?.goToDetailCell
+            .subscribe(onNext: { item in
+                self.goToDetail(item: item)
+            }).disposed(by: disposeBag)
+
     }
     
     func performQuery(with filter: String?) {
@@ -97,6 +122,39 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController {
     func goToWrite(){
+        
+        let storyBoard = UIStoryboard(name: "Search", bundle: nil)
+        let calendar = storyBoard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+        //detailVC.item = item
+       
+        self.navigationController?.pushViewController(calendar, animated: true)
+        self.tabBarController?.hidesBottomBarWhenPushed = true
+    }
+    
+    func goToDetail(item: HomeCell) {
+        let storyBoard = UIStoryboard(name: "Home", bundle: nil)
+        let detailVC = storyBoard.instantiateViewController(withIdentifier: "DetailInquiryViewController") as! DetailInquiryViewController
+        //detailVC.item = item
+        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
+}
+
+
+extension HomeViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let list = list[indexPath.row]
+        self.goToDetail(item: list)
+    }
+}
+
+extension HomeViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        performQuery(with: searchText)
+    }
+}
+
+extension HomeViewController {
+    func goToWrite(){
         let storyBoard = UIStoryboard(name: "Search", bundle: nil)
         let calendar = storyBoard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
         //detailVC.item = item
@@ -111,4 +169,5 @@ extension HomeViewController {
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
+
 
