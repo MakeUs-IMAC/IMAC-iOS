@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct LoginView: View {
-    @State private var shouldShowTabBarView = false
+    @EnvironmentObject private var profileViewModel: ProfileViewModel
+    
+    @State private var shouldShowNextView = false
     @State private var shouldShowKakaoLoginView = false
     @State private var shouldShowNaverLoginView = false
     @State private var shouldShowGoogleLoginView = false
     
+    @State private var nextView: NextView = .profileForm
     var body: some View {
         VStack{
             Spacer()
@@ -55,38 +58,61 @@ struct LoginView: View {
         }
         .frame(maxHeight:.infinity)
         .background(Color.appColor.ignoresSafeArea())
-        .fullScreenCover(isPresented: $shouldShowTabBarView){
-            TabBarViewUIRepresentable()
+        .fullScreenCover(isPresented: $shouldShowNextView){
+            switch nextView {
+            case .tabBar:
+                TabBarViewUIRepresentable()
+            case .profileForm:
+                ProfileFormView()
+            }
         }.fullScreenCover(isPresented: $shouldShowKakaoLoginView){
-            checkShouldShowTabBar()
+            decideNextView()
         }content:{
             LoginWebView(.kakao)
         }
         .fullScreenCover(isPresented: $shouldShowNaverLoginView){
-            checkShouldShowTabBar()
+            decideNextView()
         }content:{
             LoginWebView(.naver)
         }
         .fullScreenCover(isPresented: $shouldShowGoogleLoginView){
-            checkShouldShowTabBar()
+            decideNextView()
         }content:{
             LoginWebView(.google)
         }
         .onAppear{
-            checkShouldShowTabBar()
+            decideNextView()
         }
 
         
     }
     
+    private enum NextView{
+        case tabBar
+        case profileForm
+    }
     
-    private func checkShouldShowTabBar(){
+    private func decideNextView(){
         if let _ = UserDefaults.standard.string(forKey: "token"){
-            shouldShowTabBarView = true
+            profileViewModel.checkPresenceOfProfile{result, error in
+                if error == nil{
+                    if result{
+                        self.nextView = .tabBar
+                    }
+                    else{
+                        self.nextView = .profileForm
+                    }
+                    
+                    self.shouldShowNextView = true
+                }
+                else{
+
+                }
+            }
             return
         }
         
-        shouldShowTabBarView = false
+        shouldShowNextView = false
     }
 }
 
