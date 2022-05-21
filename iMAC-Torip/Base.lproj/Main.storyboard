@@ -12,11 +12,8 @@
         <!--Tab Bar View Controller-->
         <scene sceneID="EXb-HH-Uo9">
             <objects>
-<<<<<<< HEAD
-                <tabBarController storyboardIdentifier="TabBarViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="r6W-RW-ujX" customClass="TabBarViewController" customModule="iMAC_Torip" customModuleProvider="target" sceneMemberID="viewController">
-=======
+
                 <tabBarController hidesBottomBarWhenPushed="YES" id="r6W-RW-ujX" customClass="TabBarViewController" customModule="iMAC_Torip" customModuleProvider="target" sceneMemberID="viewController">
->>>>>>> c30cbf2 (connect to tabBar)
                     <navigationItem key="navigationItem" id="IpK-Na-unu"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pyZ-KV-I22">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>

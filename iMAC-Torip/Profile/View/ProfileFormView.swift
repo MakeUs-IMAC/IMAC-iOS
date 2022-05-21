@@ -10,8 +10,8 @@ import SwiftUI
 struct ProfileFormView: View {
     @State private var nickname = ""
     @State private var contract = ""
-    @State private var sexTag = 0
-    @State private var sex: Sex = .male
+    @State private var genderTag = 0
+    @State private var gender: Gender = .male
     @State private var age: Age = .teen
     @State private var carType: CarType = .compactCar
     var body: some View {
@@ -30,9 +30,9 @@ struct ProfileFormView: View {
                     .textFieldStyle(.roundedBorder)
                 
                 //여행자일 때
-                Picker("", selection: $sexTag){
-                    ForEach(0 ..< Sex.allCases.count, id:\.self){
-                        Text("\(Sex.allCases[$0].rawValue)").tag($0)
+                Picker("", selection: $genderTag){
+                    ForEach(0 ..< Gender.allCases.count, id:\.self){
+                        Text("\(Gender.allCases[$0].rawValue)").tag($0)
                     }
                 }
                 .pickerStyle(SegmentedPickerStyle())
