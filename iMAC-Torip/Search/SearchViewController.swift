@@ -9,13 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-struct HomeCell: Hashable {
-    var id = UUID()
-    var imageURL: String
-    var title: String
-    var date: String
-    var count: Int
-}
+//struct HomeCell: Hashable {
+//    var id = UUID()
+//    var imageURL: String
+//    var title: String
+//    var date: String
+//    var count: Int
+//}
 
 class SearchViewController: UIViewController {
    
@@ -24,16 +24,16 @@ class SearchViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     private var section = 0
-    var dataSource: UITableViewDiffableDataSource<Int, HomeCell>! = nil
-    var currentSnapshot: NSDiffableDataSourceSnapshot<Int, HomeCell>! = nil
-    var list = [HomeCell(imageURL: "", title: "1", date: "d", count: 1), HomeCell(imageURL: "", title: "2", date: "c", count: 2)]
+    var dataSource: UITableViewDiffableDataSource<Int, GetPosts>! = nil
+    var currentSnapshot: NSDiffableDataSourceSnapshot<Int, GetPosts>! = nil
+
     var viewModel: SearchViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
         configureDataSource()
-        viewModel = SearchViewModel(list: list)
+        viewModel = SearchViewModel()
         viewModel?.list = list
         searchBar.delegate = self
         tableView.delegate = self
@@ -41,7 +41,7 @@ class SearchViewController: UIViewController {
     
     private func configureDataSource() {
         tableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
-        dataSource = UITableViewDiffableDataSource<Int, HomeCell>(tableView: tableView) { (tableView, indexPath, item) -> HomeTableViewCell? in let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
+        dataSource = UITableViewDiffableDataSource<Int, GetPosts>(tableView: tableView) { (tableView, indexPath, item) -> HomeTableViewCell? in let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
             cell.titleLabel.text = item.title
             cell.placeLabel.text = item.date
             cell.palceImageView.image = UIImage(systemName: "heart.fill")

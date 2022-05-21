@@ -26,7 +26,7 @@ class DetailViewController: UIViewController {
         case main
     }
 
-    
+    @IBOutlet weak var collectionViewHeight: NSLayoutConstraint!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var areaCollectionView: UICollectionView!
     @IBOutlet weak var placeCollectionView: UICollectionView!
@@ -38,7 +38,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var userCount: UIStepper!
     @IBOutlet weak var moreInfoText: UITextView!
     @IBOutlet weak var texfield: UITextField!
-    
+    var headerView: HeaderView?
     @IBAction func doneButton() {
         self.alertViewController(title: "글 작성 완료", message: "글 작성이 완료 되었습니다.", completion: { str in })
         self.navigationController?.popViewController(animated: true)
@@ -52,6 +52,14 @@ class DetailViewController: UIViewController {
     @IBAction func driverCountValueChanged(sender: UIStepper) {
         driverCountLabel.text = "\(Int(sender.value).description)명"
     }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        let height = placeCollectionView.collectionViewLayout.collectionViewContentSize.height
+        collectionViewHeight.constant = height
+        self.view.layoutIfNeeded()
+    }
+    
     private var section = 0
     var area = [String]()
     var areaDataSource: UICollectionViewDiffableDataSource<Section, String>! = nil
@@ -95,20 +103,26 @@ class DetailViewController: UIViewController {
             snapshot.appendItems(area)
             self.areaDataSource.apply(snapshot, animatingDifferences: true)
     }
-        
+    
+    func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.reuseIdentifier, for: indexPath) as? HeaderView else { fatalError() }
+            headerView.DayLabel.text = "Day \(String(indexPath.section + 1))"
+            self.headerView = headerView
+            return headerView
+        }
     func collectionviewSetting(){
         placeCollectionView.dataSource = self
         placeCollectionView.delegate = self
         
-        let flowLayout = UICollectionViewFlowLayout()
-        placeCollectionView.collectionViewLayout = flowLayout
-                flowLayout.minimumInteritemSpacing = 0
-                flowLayout.minimumLineSpacing = 0
-        placeCollectionView.isUserInteractionEnabled = true
-        
+//        let flowLayout = UICollectionViewFlowLayout()
+//        placeCollectionView.collectionViewLayout = flowLayout
+//                flowLayout.minimumInteritemSpacing = 0
+//                flowLayout.minimumLineSpacing = 0
+//        placeCollectionView.isUserInteractionEnabled = true
+//
         placeCollectionView.register(AddPlaceCollectionViewCell.self, forCellWithReuseIdentifier: AddPlaceCollectionViewCell.identifier)
         placeCollectionView.register(PlaceCollectionViewCell.self, forCellWithReuseIdentifier: PlaceCollectionViewCell.identifier)
-
+        placeCollectionView.register(UINib(nibName: HeaderView.reuseIdentifier, bundle: nil), forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: HeaderView.reuseIdentifier)
     }
 
     func scrollViewTouch() {
@@ -148,6 +162,7 @@ extension DetailViewController: PHPickerViewControllerDelegate {
                 itemProvider.loadObject(ofClass: UIImage.self) { (image, error) in
                     if let image = image as? UIImage {
                         DispatchQueue.main.async {
+                            self.profileImageView.contentMode = .scaleToFill
                             self.profileImageView.image = image
                         }
                     }
@@ -168,6 +183,7 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             let cell = placeCollectionView.dequeueReusableCell(withReuseIdentifier: PlaceCollectionViewCell.identifier, for: indexPath) as! PlaceCollectionViewCell
+            cell.backgroundColor = .gray
             return cell
         }else {
             let cell = placeCollectionView.dequeueReusableCell(withReuseIdentifier: AddPlaceCollectionViewCell.identifier, for: indexPath) as! AddPlaceCollectionViewCell
@@ -177,8 +193,7 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
-
-        self.navigationController?.pushViewController(PostCodeInputViewController(), animated: true)
+        self.present(PostCodeInputViewController(), animated: true)
         
 //        if indexPath.row == 0 {
 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostCodeInputViewController") as! PostCodeInputViewController

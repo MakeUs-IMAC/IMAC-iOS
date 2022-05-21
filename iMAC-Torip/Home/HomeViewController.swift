@@ -80,6 +80,7 @@ class HomeViewController: UIViewController {
             }).disposed(by: disposeBag)
 
     }
+
 }
 
 extension HomeViewController: UITableViewDelegate {

@@ -79,7 +79,6 @@ extension CalendarViewController: FSCalendarDelegate {
                 calendar.deselect(date)
             }
         }
-        count = calendar.selectedDates.count
     
            if calendar.selectedDates.count > 2{
                for _ in 0 ..< calendar.selectedDates.count - 1{
@@ -105,6 +104,9 @@ extension CalendarViewController: FSCalendarDelegate {
                    }
                }
            }
+        
+        count = calendar.selectedDates.count
+        print("count \(count)")
        }
        
        func calendar(_ calendar: FSCalendar, didDeselect date: Date, at monthPosition: FSCalendarMonthPosition) { //선택날짜 한번 더 누를 때
