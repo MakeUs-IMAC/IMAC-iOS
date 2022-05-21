@@ -14,6 +14,7 @@ pod 'Moya/RxSwift', '~> 15.0'
 
 pod 'SnapKit', '~> 5.0.1'
 pod 'FSCalendar'
+pod 'SDWebImage', '~> 5.0'
   target 'iMAC-ToripTests' do
     inherit! :search_paths
     # Pods for testing

@@ -36,7 +36,7 @@ struct CommonGetPosts: Codable {
     var result: [GetPosts]
 }
 
-struct GetPosts: Codable {
+struct GetPosts: Codable, Hashable {
     var end: String
     var id: Int
     var image: String
