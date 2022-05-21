@@ -1,5 +1,5 @@
 PODS:
-  - Alamofire (5.4.3)
+  - Alamofire (5.6.1)
   - FSCalendar (2.8.4)
   - Moya (15.0.0):
     - Moya/Core (= 15.0.0)
@@ -35,7 +35,7 @@ SPEC REPOS:
     - SnapKit
 
 SPEC CHECKSUMS:
-  Alamofire: e447a2774a40c996748296fa2c55112fdbbc42f9
+  Alamofire: 87bd8c952f9a4454320fce00d9cc3de57bcadaf5
   FSCalendar: 2d1d0d9398f12d439f55c1fe0f01525b151b8260
   Moya: 138f0573e53411fb3dc17016add0b748dfbd78ee
   RxCocoa: 4baf94bb35f2c0ab31bc0cb9f1900155f646ba42
