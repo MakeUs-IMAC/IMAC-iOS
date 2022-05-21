@@ -77,7 +77,7 @@ class SearchViewController: UIViewController {
         let output = viewModel?.transform(from: input, disposeBag: viewModel?.disposeBag ?? self.disposeBag)
         output?.goToDetailCell
             .subscribe(onNext: { item in
-                goToDetail(item: item)
+                self.goToDetail(item: item)
             }).disposed(by: disposeBag)
     }
     
