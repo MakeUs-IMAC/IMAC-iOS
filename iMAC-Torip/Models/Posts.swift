@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct CreatePost {
+struct CreatePost: Codable {
     var content: String
     var driverFlag: Int
     var end: String
@@ -19,11 +19,28 @@ struct CreatePost {
     var userId: Int
 }
 
-struct TotalPlace {
+struct TotalPlace: Codable {
     var places: [CreatePlace]
 }
 
-struct CreatePlace {
+struct CreatePlace: Codable {
     var address: String
     var name: String
+}
+
+
+struct CommonGetPosts: Codable {
+    var code: Int
+    var isSuccess: Bool
+    var message: String
+    var result: [GetPosts]
+}
+
+struct GetPosts: Codable {
+    var end: String
+    var id: Int
+    var image: String
+    var participants: Int
+    var region: String
+    var start: String
 }

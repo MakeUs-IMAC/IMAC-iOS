@@ -53,6 +53,7 @@
 		8E8134672839810500078711 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8134662839810500078711 /* HeaderView.xib */; };
 		8E81346B283986E600078711 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346A283986E600078711 /* PostAPI.swift */; };
 		8E81346E2839886B00078711 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346D2839886B00078711 /* Posts.swift */; };
+		8E8134702839922C00078711 /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346F2839922C00078711 /* DateParser.swift */; };
 		8E9FCB042839406900E36C86 /* AddPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */; };
 		8E9FCB0628394C2F00E36C86 /* AreaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */; };
 		8E9FCB082839667500E36C86 /* TabBarViewUIRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB072839667500E36C86 /* TabBarViewUIRepresentable.swift */; };
@@ -140,6 +141,7 @@
 		8E8134662839810500078711 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		8E81346A283986E600078711 /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
 		8E81346D2839886B00078711 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		8E81346F2839922C00078711 /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
 		8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E9FCB072839667500E36C86 /* TabBarViewUIRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewUIRepresentable.swift; sourceTree = "<group>"; };
@@ -402,6 +404,7 @@
 				06910A02283958D3007FE412 /* Color + Extension.swift */,
 				8E3A50DA2838DC7600E9F2A6 /* UIImage+UIButton.swift */,
 				8E81346128396D5000078711 /* UIViewController.swift */,
+				8E81346F2839922C00078711 /* DateParser.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -753,6 +756,7 @@
 				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
 				E92A3FB32838DBD8009DF54C /* DetailInquiryViewModel.swift in Sources */,
 				06910A16283970B9007FE412 /* Age.swift in Sources */,
+				8E8134702839922C00078711 /* DateParser.swift in Sources */,
 				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

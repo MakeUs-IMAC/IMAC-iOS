@@ -10,7 +10,7 @@ import RxSwift
 
 class SearchViewModel {
     let disposeBag = DisposeBag()
-    var list: [HomeCell]
+    var list: [GetPosts]
     struct Input {
         let viewWillAppearEvent: Observable<Void>
         let textBeginChanging: Observable<Void>
@@ -19,11 +19,11 @@ class SearchViewModel {
     }
     
     struct Output {
-        let goToDetailCell = PublishSubject<HomeCell>()
+        let goToDetailCell = PublishSubject<GetPosts>()
     }
     
-    init(list: [HomeCell]) {
-        self.list = list
+    init() {
+      getPosts()
     }
     
     
