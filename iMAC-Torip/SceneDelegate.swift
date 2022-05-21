@@ -18,11 +18,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         window?.makeKeyAndVisible()
-       //let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "PostCodeInputViewController") as? PostCodeInputViewController
-        //let vc = UINavigationController(rootViewController: PostCodeInputViewController())
-        let calendarVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
-       // vc.isNavigationBarHidden = true
-        window?.rootViewController = calendarVC
+       let calendar = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+        let vc = UINavigationController(rootViewController: calendar)
+
+        window?.rootViewController = vc
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

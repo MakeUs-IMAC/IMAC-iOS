@@ -38,11 +38,11 @@
 		8E3A50DB2838DC7600E9F2A6 /* UIImage+UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50DA2838DC7600E9F2A6 /* UIImage+UIButton.swift */; };
 		8E3A50DD28390D4F00E9F2A6 /* PostCodeInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50DC28390D4E00E9F2A6 /* PostCodeInputViewController.swift */; };
 		8E3A50DF28390F3500E9F2A6 /* AddInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50DE28390F3500E9F2A6 /* AddInputViewController.swift */; };
-		8E3A50E12839152C00E9F2A6 /* AddInputViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A50E02839152C00E9F2A6 /* AddInputViewModel.swift */; };
 		8E3A512228391E1B00E9F2A6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A512128391E1B00E9F2A6 /* CalendarViewController.swift */; };
 		8E3A51242839289800E9F2A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A51232839289800E9F2A6 /* DetailViewController.swift */; };
-		8E3A5126283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A5125283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift */; };
 		8E3A5128283937C000E9F2A6 /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */; };
+		8E9FCB042839406900E36C86 /* AddPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */; };
+		8E9FCB0628394C2F00E36C86 /* AreaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */; };
 		D53D321D43337A57E5DC4FF1 /* Pods_iMAC_ToripTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */; };
 		E92A3FB32838DBD8009DF54C /* DetailInquiryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A3FB22838DBD8009DF54C /* DetailInquiryViewModel.swift */; };
 		E92A3FB72838DD6F009DF54C /* DetailInquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E92A3FB62838DD6F009DF54C /* DetailInquiryViewController.swift */; };
@@ -112,11 +112,11 @@
 		8E3A50DA2838DC7600E9F2A6 /* UIImage+UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+UIButton.swift"; sourceTree = "<group>"; };
 		8E3A50DC28390D4E00E9F2A6 /* PostCodeInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCodeInputViewController.swift; sourceTree = "<group>"; };
 		8E3A50DE28390F3500E9F2A6 /* AddInputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInputViewController.swift; sourceTree = "<group>"; };
-		8E3A50E02839152C00E9F2A6 /* AddInputViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInputViewModel.swift; sourceTree = "<group>"; };
 		8E3A512128391E1B00E9F2A6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		8E3A51232839289800E9F2A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
-		8E3A5125283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
+		8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCollectionViewCell.swift; sourceTree = "<group>"; };
 		A564B95EE2441A1765B8D939 /* Pods-iMAC-Torip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip/Pods-iMAC-Torip.release.xcconfig"; sourceTree = "<group>"; };
 		D85E101497FCDE20AE2FA068 /* Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E18CF7CB332905979D2B44A4 /* Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; path = "Target Support Files/Pods-iMAC-Torip-iMAC-ToripUITests/Pods-iMAC-Torip-iMAC-ToripUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -284,11 +284,11 @@
 				8E3A50D72838D93500E9F2A6 /* SearchViewModel.swift */,
 				8E3A50DC28390D4E00E9F2A6 /* PostCodeInputViewController.swift */,
 				8E3A50DE28390F3500E9F2A6 /* AddInputViewController.swift */,
-				8E3A50E02839152C00E9F2A6 /* AddInputViewModel.swift */,
 				8E3A512128391E1B00E9F2A6 /* CalendarViewController.swift */,
 				8E3A51232839289800E9F2A6 /* DetailViewController.swift */,
-				8E3A5125283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift */,
 				8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */,
+				8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */,
+				8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -602,12 +602,15 @@
 				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
 				8E3A50DB2838DC7600E9F2A6 /* UIImage+UIButton.swift in Sources */,
 				8E3A50912838C73000E9F2A6 /* ViewController.swift in Sources */,
+				8E9FCB0628394C2F00E36C86 /* AreaCollectionViewCell.swift in Sources */,
 				8E3A50CE2838CAFC00E9F2A6 /* AlarmViewController.swift in Sources */,
 				8E3A50DF28390F3500E9F2A6 /* AddInputViewController.swift in Sources */,
 				8E3A51242839289800E9F2A6 /* DetailViewController.swift in Sources */,
 				8E3A50D22838D6A700E9F2A6 /* HomeViewModel.swift in Sources */,
+				8E9FCB042839406900E36C86 /* AddPlaceCollectionViewCell.swift in Sources */,
 				06910A0B283958EA007FE412 /* LoginVIewController.swift in Sources */,
 				8E3A50E12839152C00E9F2A6 /* AddInputViewModel.swift in Sources */,
+
 				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
 				06910A09283958EA007FE412 /* LoginWebView.swift in Sources */,
 				06910A0A283958EA007FE412 /* LoginView.swift in Sources */,
@@ -615,7 +618,6 @@
 				8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */,
 				E92A3FBF2838ECE4009DF54C /* ParticipantTableViewCell.swift in Sources */,
 				8E3A50D82838D93500E9F2A6 /* SearchViewModel.swift in Sources */,
-				8E3A5126283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift in Sources */,
 				8E3A5128283937C000E9F2A6 /* PlaceCollectionViewCell.swift in Sources */,
 				8E3A50D52838D72F00E9F2A6 /* HomeTableViewCell.swift in Sources */,
 				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
