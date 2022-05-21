@@ -80,9 +80,8 @@ class HomeViewController: UIViewController {
             }).disposed(by: disposeBag)
 
     }
-    
-}
 
+}
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -113,5 +112,4 @@ extension HomeViewController {
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }
-
 
