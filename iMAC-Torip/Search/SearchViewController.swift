@@ -6,24 +6,94 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
+
+struct HomeCell: Hashable {
+    var id = UUID()
+    var imageURL: String
+    var title: String
+    var date: String
+    var count: Int
+}
 
 class SearchViewController: UIViewController {
-
+   
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
+    
+    let disposeBag = DisposeBag()
+    private var section = 0
+    var dataSource: UITableViewDiffableDataSource<Int, HomeCell>! = nil
+    var currentSnapshot: NSDiffableDataSourceSnapshot<Int, HomeCell>! = nil
+    var list = [HomeCell(imageURL: "", title: "1", date: "d", count: 1), HomeCell(imageURL: "", title: "2", date: "c", count: 2)]
+    var viewModel: SearchViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        bindViewModel()
+        configureDataSource()
+        viewModel = SearchViewModel(list: list)
+        viewModel?.list = list
+        searchBar.delegate = self
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func configureDataSource() {
+        tableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
+        dataSource = UITableViewDiffableDataSource<Int, HomeCell>(tableView: tableView) { (tableView, indexPath, item) -> HomeTableViewCell? in let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
+            cell.titleLabel.text = item.title
+            cell.placeLabel.text = item.date
+            cell.palceImageView.image = UIImage(systemName: "heart.fill")
+            cell.countButton.setTitle("\(item.count)명", for: .normal)
+            return cell
+        }
+        dataSource.defaultRowAnimation = .fade
+        tableView.dataSource = dataSource
+        // 빈 snapshot
+        var snapshot = NSDiffableDataSourceSnapshot<Int, HomeCell>()
+        snapshot.appendSections([section])
+        section += 1
+        snapshot.appendItems(list)
+        dataSource.apply(snapshot)
     }
-    */
+    
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    func performQuery(with filter: String?) {
+        let filtered = list.filter { ($0.title.hasPrefix(filter ?? "" ))}
+        print(filtered)
+        var snapshot = NSDiffableDataSourceSnapshot<Int, HomeCell>()
+        snapshot.appendSections([section])
+        snapshot.appendItems(filtered)
+        dataSource.apply(snapshot, animatingDifferences: true)
+    }
+    
+    func bindViewModel() {
+        let input = SearchViewModel.Input(viewWillAppearEvent: self.rx.methodInvoked(#selector(UIViewController.viewWillAppear)).map { _ in }, textBeginChanging: self.searchBar.rx.textDidBeginEditing.asObservable(), cellDidTap: self.tableView.rx.itemSelected.asObservable(), searchText: self.searchBar.rx.text.orEmpty.asObservable())
 
+        let output = viewModel?.transform(from: input, disposeBag: viewModel?.disposeBag ?? self.disposeBag)
+        output?.goToDetailCell
+            .subscribe(onNext: { item in
+                self.goToDetail(item: item)
+            }).disposed(by: disposeBag)
+    }
+    
+}
+
+extension SearchViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        performQuery(with: searchText)
+    }
+}
+
+extension SearchViewController {
+    func goToDetail(item: HomeCell) {
+        //let detailVC = UIStoryboard(name: "Home", bundle: nil)
+        //detailVC.instantiateViewController(withIdentifier: "") as? DetailView
+//        detailVC.item = item
+//        self.navigationController?.pushViewController(detailVC, animated: true)
+    }
 }
