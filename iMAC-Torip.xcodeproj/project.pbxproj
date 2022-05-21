@@ -13,6 +13,10 @@
 		06910A0A283958EA007FE412 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A07283958EA007FE412 /* LoginView.swift */; };
 		06910A0B283958EA007FE412 /* LoginVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A08283958EA007FE412 /* LoginVIewController.swift */; };
 		06910A0E28395ECA007FE412 /* SnsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A0D28395ECA007FE412 /* SnsLogin.swift */; };
+		06910A1128396A61007FE412 /* ProfileFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A1028396A61007FE412 /* ProfileFormView.swift */; };
+		06910A1428396CFC007FE412 /* Sex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A1328396CFC007FE412 /* Sex.swift */; };
+		06910A16283970B9007FE412 /* Age.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A15283970B9007FE412 /* Age.swift */; };
+		06910A1828397286007FE412 /* CarType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A1728397286007FE412 /* CarType.swift */; };
 		492F0C46C55A837C23275150 /* Pods_iMAC_Torip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */; };
 		5657FAFAF7194038BCCE2B87 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83AB9505507D32B4BBFEDB8 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework */; };
 		8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A508C2838C73000E9F2A6 /* AppDelegate.swift */; };
@@ -81,6 +85,10 @@
 		06910A07283958EA007FE412 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		06910A08283958EA007FE412 /* LoginVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
 		06910A0D28395ECA007FE412 /* SnsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnsLogin.swift; sourceTree = "<group>"; };
+		06910A1028396A61007FE412 /* ProfileFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileFormView.swift; sourceTree = "<group>"; };
+		06910A1328396CFC007FE412 /* Sex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sex.swift; sourceTree = "<group>"; };
+		06910A15283970B9007FE412 /* Age.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Age.swift; sourceTree = "<group>"; };
+		06910A1728397286007FE412 /* CarType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarType.swift; sourceTree = "<group>"; };
 		0B45B7E7A3AA74CC229B2A15 /* Pods-iMAC-ToripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-ToripTests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-ToripTests/Pods-iMAC-ToripTests.release.xcconfig"; sourceTree = "<group>"; };
 		0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_Torip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_ToripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -203,6 +211,24 @@
 			path = Enum;
 			sourceTree = "<group>";
 		};
+		06910A0F283969E7007FE412 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				06910A1028396A61007FE412 /* ProfileFormView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		06910A1228396CF7007FE412 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				06910A1328396CFC007FE412 /* Sex.swift */,
+				06910A15283970B9007FE412 /* Age.swift */,
+				06910A1728397286007FE412 /* CarType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		8E3A50802838C73000E9F2A6 = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +342,8 @@
 		8E3A50C02838C91300E9F2A6 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				06910A1228396CF7007FE412 /* Enum */,
+				06910A0F283969E7007FE412 /* View */,
 				8E3A50C72838C97C00E9F2A6 /* Profile.storyboard */,
 				8E3A50CF2838CB2400E9F2A6 /* ProfileViewController.swift */,
 			);
@@ -602,6 +630,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06910A1828397286007FE412 /* CarType.swift in Sources */,
 				E92A3FC728391D3D009DF54C /* TravelRouteArrowCollectionViewCell.swift in Sources */,
 				06910A03283958D3007FE412 /* Color + Extension.swift in Sources */,
 				E92A3FC228390C58009DF54C /* DetailInquiry.swift in Sources */,
@@ -616,12 +645,12 @@
 				8E9FCB0628394C2F00E36C86 /* AreaCollectionViewCell.swift in Sources */,
 				8E3A50CE2838CAFC00E9F2A6 /* AlarmViewController.swift in Sources */,
 				8E3A50DF28390F3500E9F2A6 /* AddInputViewController.swift in Sources */,
+				06910A1428396CFC007FE412 /* Sex.swift in Sources */,
 				8E3A51242839289800E9F2A6 /* DetailViewController.swift in Sources */,
 				8E3A50D22838D6A700E9F2A6 /* HomeViewModel.swift in Sources */,
+				06910A1128396A61007FE412 /* ProfileFormView.swift in Sources */,
 				8E9FCB042839406900E36C86 /* AddPlaceCollectionViewCell.swift in Sources */,
 				06910A0B283958EA007FE412 /* LoginVIewController.swift in Sources */,
-				8E3A50E12839152C00E9F2A6 /* AddInputViewModel.swift in Sources */,
-
 				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
 				06910A09283958EA007FE412 /* LoginWebView.swift in Sources */,
 				06910A0A283958EA007FE412 /* LoginView.swift in Sources */,
@@ -635,6 +664,7 @@
 				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
 				E92A3FB32838DBD8009DF54C /* DetailInquiryViewModel.swift in Sources */,
 				06910A01283958C7007FE412 /* TabBarViewUIRepresentable.swift in Sources */,
+				06910A16283970B9007FE412 /* Age.swift in Sources */,
 				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
