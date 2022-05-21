@@ -97,7 +97,6 @@ extension HomeViewController: UISearchBarDelegate {
 
 extension HomeViewController {
     func goToWrite(){
-        
         let storyBoard = UIStoryboard(name: "Search", bundle: nil)
         let calendar = storyBoard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
         //detailVC.item = item
