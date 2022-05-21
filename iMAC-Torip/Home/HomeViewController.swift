@@ -100,7 +100,6 @@ extension HomeViewController {
         let storyBoard = UIStoryboard(name: "Search", bundle: nil)
         let calendar = storyBoard.instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
         //detailVC.item = item
-       
         self.navigationController?.pushViewController(calendar, animated: true)
         self.tabBarController?.hidesBottomBarWhenPushed = true
     }
