@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 class LoginViewController:UIViewController{
     @IBSegueAction func addSwiftUiView(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: LoginView())
+        return UIHostingController(coder: coder, rootView: LoginView().environmentObject(ProfileViewModel()))
     }
     
 }
