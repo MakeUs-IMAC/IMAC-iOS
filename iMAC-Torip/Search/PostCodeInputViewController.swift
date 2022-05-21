@@ -9,21 +9,31 @@ import UIKit
 import WebKit
 
 class PostCodeInputViewController: UIViewController {
-    @IBOutlet weak var postCodeView: WKWebView!
+    
+    lazy var postCodeView: WKWebView = {
+        let webView = WKWebView()
+        return webView
+    }()
+    
     let indicator = UIActivityIndicatorView(style: .medium)
     var address = ""
     var addressData = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let url = URL(string: "https://makeus-imac.github.io/IMAC-postCode/"),
-            let webView = postCodeView
+        guard let url = URL(string: "https://makeus-imac.github.io/IMAC-postCode/")
             else { return }
         let request = URLRequest(url: url)
-        webView.load(request)
-        webView.addSubview(indicator)
-        webView.configuration.userContentController.add(self, name: "callBackHandler")
-        webView.navigationDelegate = self
+        postCodeView.load(request)
+        postCodeView.addSubview(indicator)
+        postCodeView.configuration.userContentController.add(self, name: "callBackHandler")
+        postCodeView.navigationDelegate = self
+        view.addSubview(postCodeView)
+        postCodeView.translatesAutoresizingMaskIntoConstraints = false
+        postCodeView.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        postCodeView.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        postCodeView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
+        postCodeView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
     }
 
 
@@ -36,6 +46,7 @@ extension PostCodeInputViewController: WKScriptMessageHandler {
                 addressData = data["roadAddress"] as? String ?? ""
                 print("addressData \(addressData)")
             }
+        self.dismiss(animated: true)
         }
 }
 
