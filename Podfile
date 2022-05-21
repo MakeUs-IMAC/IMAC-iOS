@@ -6,9 +6,13 @@ target 'iMAC-Torip' do
   use_frameworks!
 
   # Pods for iMAC-Torip
-pod 'RxSwift', '4.4.0'
-pod 'RxCocoa', '4.4.0'
+pod 'RxSwift', '6.2.0'
+pod 'RxCocoa', '6.2.0'
 
+pod 'Moya', '~> 15.0'
+pod 'Moya/RxSwift', '~> 15.0'
+
+pod 'FSCalendar'
   target 'iMAC-ToripTests' do
     inherit! :search_paths
     # Pods for testing
