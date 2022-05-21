@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
@@ -180,7 +181,7 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="724"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="FlZ-QI-2xG">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1310"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="1410"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bQS-Ob-uHd" userLabel="전국">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="280"/>
@@ -226,14 +227,15 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hMw-Xa-5w8" userLabel="대표이미지">
                                                 <rect key="frame" x="0.0" y="280" width="414" height="280"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="대표 이미지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yd-Mk-Cms">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="대표 이미지" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yd-Mk-Cms">
                                                         <rect key="frame" x="20" y="20" width="91.5" height="24"/>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="glz-eW-Ma5">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="glz-eW-Ma5">
                                                         <rect key="frame" x="40" y="64" width="334" height="196"/>
+                                                        <imageReference key="image" image="questionmark.app.dashed" catalog="system" renderingMode="original"/>
                                                     </imageView>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -248,12 +250,12 @@
                                                 </constraints>
                                             </view>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="03q-eI-MeM">
-                                                <rect key="frame" x="0.0" y="560" width="414" height="200"/>
+                                                <rect key="frame" x="0.0" y="560" width="414" height="300"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="9hz-WS-eXH"/>
+                                                    <constraint firstAttribute="height" constant="300" id="9hz-WS-eXH"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7du-PY-Aor">
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7du-PY-Aor">
                                                     <size key="itemSize" width="128" height="128"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -271,7 +273,7 @@
                                                 </cells>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-9X-yBT">
-                                                <rect key="frame" x="0.0" y="760" width="414" height="550"/>
+                                                <rect key="frame" x="0.0" y="860" width="414" height="550"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기사님 유무" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfq-Qd-fFq">
                                                         <rect key="frame" x="20" y="20" width="285" height="31"/>
@@ -294,27 +296,33 @@
                                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YbS-Vc-X3f">
                                                         <rect key="frame" x="325" y="20" width="51" height="31"/>
                                                     </switch>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYQ-4I-oWy">
-                                                        <rect key="frame" x="248.5" y="66" width="41.5" height="32"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1명" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XYQ-4I-oWy">
+                                                        <rect key="frame" x="267.5" y="66" width="22.5" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="4yg-6o-rtK">
                                                         <rect key="frame" x="300" y="66" width="94" height="32"/>
+                                                        <connections>
+                                                            <action selector="driverCountValueChangedWithSender:" destination="Rvl-bh-LlR" eventType="touchUpInside" id="HCn-hJ-Jem"/>
+                                                        </connections>
                                                     </stepper>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc2-iV-jbw">
-                                                        <rect key="frame" x="248.5" y="113" width="41.5" height="32"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1명" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sc2-iV-jbw">
+                                                        <rect key="frame" x="267.5" y="113" width="22.5" height="32"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="gVz-bF-o9Y">
                                                         <rect key="frame" x="300" y="113" width="94" height="32"/>
+                                                        <connections>
+                                                            <action selector="userCountValueChangedWithSender:" destination="Rvl-bh-LlR" eventType="touchUpInside" id="whi-xi-z9d"/>
+                                                        </connections>
                                                     </stepper>
                                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Jz6-WT-kaX">
                                                         <rect key="frame" x="20" y="199" width="374" height="341"/>
-                                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                        <color key="backgroundColor" systemColor="systemGray5Color"/>
                                                         <color key="textColor" systemColor="labelColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -412,10 +420,22 @@
                             <constraint firstItem="mhn-xH-nxb" firstAttribute="top" secondItem="7rS-bi-hjW" secondAttribute="bottom" id="o0f-2d-oQi"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="areaCollectionView" destination="Vwh-YP-eor" id="iEu-Rb-vdI"/>
+                        <outlet property="driverCount" destination="4yg-6o-rtK" id="XkY-q2-trT"/>
+                        <outlet property="driverCountLabel" destination="XYQ-4I-oWy" id="y6t-XX-dRw"/>
+                        <outlet property="isNeedDriver" destination="YbS-Vc-X3f" id="aEt-QC-zD6"/>
+                        <outlet property="moreInfoText" destination="Jz6-WT-kaX" id="CXc-9P-Nnc"/>
+                        <outlet property="placeCollectionView" destination="03q-eI-MeM" id="CQy-y4-b6H"/>
+                        <outlet property="profileImageView" destination="glz-eW-Ma5" id="YcW-NO-Na1"/>
+                        <outlet property="scrollView" destination="7rS-bi-hjW" id="4wU-19-Zg8"/>
+                        <outlet property="userCount" destination="gVz-bF-o9Y" id="5P5-x6-JE0"/>
+                        <outlet property="userCountLabel" destination="sc2-iV-jbw" id="M6l-hf-fex"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9VF-FL-d0i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-633.33333333333337" y="81.696428571428569"/>
+            <point key="canvasLocation" x="-710" y="82"/>
         </scene>
         <!--Calendar View Controller-->
         <scene sceneID="4RF-MS-6aR">
@@ -490,6 +510,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="questionmark.app.dashed" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -498,6 +519,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

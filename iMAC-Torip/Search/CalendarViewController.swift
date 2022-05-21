@@ -14,7 +14,7 @@ class CalendarViewController: UIViewController {
     @IBOutlet weak var stackView: UIStackView!
     @IBOutlet weak var nextButton: UIButton!
     var monthList = [Int]()
-    
+    var count = 0
     let disposeBag = DisposeBag()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,6 +63,7 @@ class CalendarViewController: UIViewController {
 extension CalendarViewController {
     func navigateToDetailVC() {
         let vc = self.storyboard!.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        vc.sectionCount = count
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
@@ -78,10 +79,8 @@ extension CalendarViewController: FSCalendarDelegate {
                 calendar.deselect(date)
             }
         }
-        
-        print(monthList)
-        
-        
+        count = calendar.selectedDates.count
+    
            if calendar.selectedDates.count > 2{
                for _ in 0 ..< calendar.selectedDates.count - 1{
                    calendar.deselect(calendar.selectedDates[0])

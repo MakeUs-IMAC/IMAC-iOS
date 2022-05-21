@@ -8,10 +8,18 @@
 import UIKit
 
 class AddPlaceCollectionViewCell: UICollectionViewCell {
-    var addButton: UIButton = {
-        let button = UIButton()
-        return button
+    static var identifier = "AddPlaceCollectionViewCell"
+    
+    var titleLabel: UILabel = {
+        let label = UILabel()
+        return label
     }()
+    
+    var addressLabel: UILabel = {
+        let label = UILabel()
+        return label
+    }()
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -24,10 +32,21 @@ class AddPlaceCollectionViewCell: UICollectionViewCell {
 }
 
 extension AddPlaceCollectionViewCell {
-    func configureUI(){
-        contentView.addSubview(addButton)
-        addButton.snp.makeConstraints {
-            
+    
+    func configureUI() {
+        contentView.addSubview(titleLabel)
+        contentView.addSubview(addressLabel)
+        
+        titleLabel.snp.makeConstraints { make in
+            make.top.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
+        }
+        
+        addressLabel.snp.makeConstraints { make in
+            make.top.equalTo(titleLabel).offset(15)
+            make.leading.equalToSuperview().offset(10)
+            make.trailing.equalToSuperview().offset(-10)
+            make.bottom.equalToSuperview().offset(10)
         }
     }
 }

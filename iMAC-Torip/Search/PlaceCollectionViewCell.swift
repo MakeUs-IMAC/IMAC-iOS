@@ -9,13 +9,13 @@ import UIKit
 import SnapKit
 
 class PlaceCollectionViewCell: UICollectionViewCell {
-    var titleLabel: UILabel = {
-        let label = UILabel()
-        return label
-    }()
-    
-    var addressLabel: UILabel = {
-        let label = UILabel()
+    static var identifier = "PlaceCollectionViewCell"
+
+    var addLabel: UILabel = {
+        var label = UILabel()
+        label.backgroundColor = .gray
+        label.text = "+"
+        label.font = UIFont.systemFont(ofSize: 40)
         return label
     }()
     
@@ -31,20 +31,11 @@ class PlaceCollectionViewCell: UICollectionViewCell {
 }
 
 extension PlaceCollectionViewCell {
-    func configureUI() {
-        contentView.addSubview(titleLabel)
-        contentView.addSubview(addressLabel)
-        
-        titleLabel.snp.makeConstraints { make in
-            make.top.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview().offset(-10)
-        }
-        
-        addressLabel.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel).offset(15)
-            make.leading.equalToSuperview().offset(10)
-            make.trailing.equalToSuperview().offset(-10)
-            make.bottom.equalToSuperview().offset(10)
+    func configureUI(){
+        contentView.addSubview(addLabel)
+        addLabel.snp.makeConstraints { make in
+            //make.leading.top.bottom.trailing.equalToSuperview()
+            make.centerX.centerY.equalToSuperview()
         }
     }
 }
