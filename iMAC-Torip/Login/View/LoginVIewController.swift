@@ -8,8 +8,8 @@
 import Foundation
 import SwiftUI
 class LoginViewController:UIViewController{
-   
-    @IBSegueAction func addSwiftUIView(_ coder: NSCoder) -> UIViewController?{
+    @IBSegueAction func addSwiftUiView(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: LoginView())
     }
+    
 }
