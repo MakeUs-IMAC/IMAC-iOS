@@ -27,6 +27,10 @@ class AddInputViewController: UIViewController {
         addressTextField.text = addressData
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
     private func bindViewModel(){
         doneButton.rx.tap
             .subscribe(onNext: { _ in

@@ -19,7 +19,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let _ = (scene as? UIWindowScene) else { return }
         window?.makeKeyAndVisible()
        //let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "PostCodeInputViewController") as? PostCodeInputViewController
-        window?.rootViewController = PostCodeInputViewController()
+        let vc = UINavigationController(rootViewController: PostCodeInputViewController())
+        vc.isNavigationBarHidden = true
+        window?.rootViewController = vc
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

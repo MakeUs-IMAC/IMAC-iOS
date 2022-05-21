@@ -46,8 +46,9 @@ extension PostCodeInputViewController: WKScriptMessageHandler {
                 addressData = data["roadAddress"] as? String ?? ""
                 print("addressData \(addressData)")
             }
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "AddInputViewController") as! AddInputViewController
+        let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "AddInputViewController") as! AddInputViewController
         vc.addressData = addressData
+        self.navigationController?.isNavigationBarHidden = false
         self.navigationController?.pushViewController(vc, animated: true)
         }
 }
