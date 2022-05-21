@@ -12,6 +12,7 @@
 		06910A09283958EA007FE412 /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A06283958EA007FE412 /* LoginWebView.swift */; };
 		06910A0A283958EA007FE412 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A07283958EA007FE412 /* LoginView.swift */; };
 		06910A0B283958EA007FE412 /* LoginVIewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A08283958EA007FE412 /* LoginVIewController.swift */; };
+		06910A0E28395ECA007FE412 /* SnsLogin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A0D28395ECA007FE412 /* SnsLogin.swift */; };
 		492F0C46C55A837C23275150 /* Pods_iMAC_Torip.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */; };
 		5657FAFAF7194038BCCE2B87 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E83AB9505507D32B4BBFEDB8 /* Pods_iMAC_Torip_iMAC_ToripUITests.framework */; };
 		8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A508C2838C73000E9F2A6 /* AppDelegate.swift */; };
@@ -79,6 +80,7 @@
 		06910A06283958EA007FE412 /* LoginWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
 		06910A07283958EA007FE412 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		06910A08283958EA007FE412 /* LoginVIewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVIewController.swift; sourceTree = "<group>"; };
+		06910A0D28395ECA007FE412 /* SnsLogin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnsLogin.swift; sourceTree = "<group>"; };
 		0B45B7E7A3AA74CC229B2A15 /* Pods-iMAC-ToripTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iMAC-ToripTests.release.xcconfig"; path = "Target Support Files/Pods-iMAC-ToripTests/Pods-iMAC-ToripTests.release.xcconfig"; sourceTree = "<group>"; };
 		0E54470C5C6828E60263EA4C /* Pods_iMAC_Torip.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_Torip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1441D4F1EEB796B2C47D93B7 /* Pods_iMAC_ToripTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iMAC_ToripTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -177,6 +179,7 @@
 		06910A04283958EA007FE412 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				06910A0C28395B13007FE412 /* Enum */,
 				06910A05283958EA007FE412 /* View */,
 			);
 			path = Login;
@@ -190,6 +193,14 @@
 				06910A08283958EA007FE412 /* LoginVIewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		06910A0C28395B13007FE412 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				06910A0D28395ECA007FE412 /* SnsLogin.swift */,
+			);
+			path = Enum;
 			sourceTree = "<group>";
 		};
 		8E3A50802838C73000E9F2A6 = {
@@ -613,6 +624,7 @@
 				06910A0A283958EA007FE412 /* LoginView.swift in Sources */,
 				E9497A2228393F720089CC68 /* TravelRouteCollectionReusableView.swift in Sources */,
 				8E3A50D02838CB2400E9F2A6 /* ProfileViewController.swift in Sources */,
+				06910A0E28395ECA007FE412 /* SnsLogin.swift in Sources */,
 				E92A3FBF2838ECE4009DF54C /* ParticipantTableViewCell.swift in Sources */,
 				8E3A50D82838D93500E9F2A6 /* SearchViewModel.swift in Sources */,
 				8E3A5126283937AC00E9F2A6 /* AddPlaceCollectionViewCell.swift in Sources */,
