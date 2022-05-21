@@ -10,6 +10,7 @@
 		0653980C28397D2400D18B45 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653980B28397D2400D18B45 /* ProfileViewModel.swift */; };
 		0653980F28397D9A00D18B45 /* ProfileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653980E28397D9A00D18B45 /* ProfileApi.swift */; };
 		0653981428397F1D00D18B45 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653981328397F1D00D18B45 /* ProfileResponse.swift */; };
+		0653981628398C8A00D18B45 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653981528398C8A00D18B45 /* UserRole.swift */; };
 		06910A03283958D3007FE412 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A02283958D3007FE412 /* Color + Extension.swift */; };
 		06910A09283958EA007FE412 /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A06283958EA007FE412 /* LoginWebView.swift */; };
 		06910A0A283958EA007FE412 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A07283958EA007FE412 /* LoginView.swift */; };
@@ -86,6 +87,7 @@
 		0653980B28397D2400D18B45 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		0653980E28397D9A00D18B45 /* ProfileApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApi.swift; sourceTree = "<group>"; };
 		0653981328397F1D00D18B45 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
+		0653981528398C8A00D18B45 /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
 		06910A02283958D3007FE412 /* Color + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		06910A06283958EA007FE412 /* LoginWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
 		06910A07283958EA007FE412 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				06910A1328396CFC007FE412 /* Gender.swift */,
 				06910A15283970B9007FE412 /* Age.swift */,
 				06910A1728397286007FE412 /* CarType.swift */,
+				0653981528398C8A00D18B45 /* UserRole.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -675,6 +678,7 @@
 				E92A3FBB2838E229009DF54C /* TravelRouteCollectionViewCell.swift in Sources */,
 				0653981428397F1D00D18B45 /* ProfileResponse.swift in Sources */,
 				8E3A512228391E1B00E9F2A6 /* CalendarViewController.swift in Sources */,
+				0653981628398C8A00D18B45 /* UserRole.swift in Sources */,
 				8E3A50DD28390D4F00E9F2A6 /* PostCodeInputViewController.swift in Sources */,
 				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
 				8E3A50DB2838DC7600E9F2A6 /* UIImage+UIButton.swift in Sources */,
