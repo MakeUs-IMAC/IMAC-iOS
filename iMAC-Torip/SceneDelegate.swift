@@ -20,9 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window?.makeKeyAndVisible()
        //let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "PostCodeInputViewController") as? PostCodeInputViewController
         //let vc = UINavigationController(rootViewController: PostCodeInputViewController())
-        let calendarVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "CalendarViewController") as! CalendarViewController
+        let detailVC = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
        // vc.isNavigationBarHidden = true
-        window?.rootViewController = calendarVC
+        window?.rootViewController = detailVC
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
