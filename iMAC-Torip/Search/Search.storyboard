@@ -253,17 +253,17 @@
                                                 <rect key="frame" x="0.0" y="560" width="414" height="300"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="300" id="9hz-WS-eXH"/>
+                                                    <constraint firstAttribute="height" constant="300" id="yiF-lD-5JB"/>
                                                 </constraints>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="7du-PY-Aor">
                                                     <size key="itemSize" width="128" height="128"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="headerReferenceSize" width="50" height="50"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="xU8-aX-cw5">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                                        <rect key="frame" x="0.0" y="50" width="128" height="128"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="X4n-sn-flu">
                                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -271,6 +271,10 @@
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
                                                 </cells>
+                                                <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="HeaderView" reuseIdentifier="HeaderView" id="sXH-wQ-UBD" customClass="HeaderView" customModule="iMAC_Torip" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </collectionReusableView>
                                             </collectionView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uvf-9X-yBT">
                                                 <rect key="frame" x="0.0" y="860" width="414" height="550"/>
@@ -451,6 +455,7 @@
                     </view>
                     <connections>
                         <outlet property="areaCollectionView" destination="Vwh-YP-eor" id="iEu-Rb-vdI"/>
+                        <outlet property="collectionViewHeight" destination="yiF-lD-5JB" id="Uoi-lM-iXA"/>
                         <outlet property="driverCount" destination="4yg-6o-rtK" id="XkY-q2-trT"/>
                         <outlet property="driverCountLabel" destination="XYQ-4I-oWy" id="y6t-XX-dRw"/>
                         <outlet property="isNeedDriver" destination="YbS-Vc-X3f" id="aEt-QC-zD6"/>
