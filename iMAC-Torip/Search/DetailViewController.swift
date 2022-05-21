@@ -183,6 +183,7 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.row == 0 {
             let cell = placeCollectionView.dequeueReusableCell(withReuseIdentifier: PlaceCollectionViewCell.identifier, for: indexPath) as! PlaceCollectionViewCell
+            cell.backgroundColor = .gray
             return cell
         }else {
             let cell = placeCollectionView.dequeueReusableCell(withReuseIdentifier: AddPlaceCollectionViewCell.identifier, for: indexPath) as! AddPlaceCollectionViewCell
@@ -192,8 +193,7 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath)
-
-        self.navigationController?.pushViewController(PostCodeInputViewController(), animated: true)
+        self.present(PostCodeInputViewController(), animated: true)
         
 //        if indexPath.row == 0 {
 //            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostCodeInputViewController") as! PostCodeInputViewController

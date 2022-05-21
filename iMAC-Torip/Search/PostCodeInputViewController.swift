@@ -48,8 +48,14 @@ extension PostCodeInputViewController: WKScriptMessageHandler {
             }
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "AddInputViewController") as! AddInputViewController
         vc.addressData = addressData
-        self.navigationController?.isNavigationBarHidden = false
-        self.navigationController?.pushViewController(vc, animated: true)
+        let rootView = self.presentingViewController
+        self.dismiss(animated: true, completion: {
+            rootView?.present(vc, animated: true, completion: nil)
+//
+//            self.navigationController?.pushViewController(vc, animated: true)
+        })
+      
+       
         }
 }
 

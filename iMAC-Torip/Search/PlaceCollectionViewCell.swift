@@ -13,7 +13,6 @@ class PlaceCollectionViewCell: UICollectionViewCell {
 
     var addLabel: UILabel = {
         var label = UILabel()
-        label.backgroundColor = .gray
         label.text = "+"
         label.font = UIFont.systemFont(ofSize: 40)
         return label
