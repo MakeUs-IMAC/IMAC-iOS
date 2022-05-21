@@ -4,12 +4,13 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="HomeViewController" id="Y6W-OH-hqX" customClass="HomeViewController" customModule="iMAC_Torip" customModuleProvider="target" sceneMemberID="viewController">
@@ -18,48 +19,58 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="ppO-t2-8dE">
-                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zMy-fF-dsp">
-                                <rect key="frame" x="257" y="55" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vfe-og-3Zl">
+                                <rect key="frame" x="314" y="693" width="60" height="60"/>
+                                <color key="backgroundColor" red="0.59999999999999998" green="0.80000000000000004" blue="1" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="fSc-nO-Qvr"/>
+                                    <constraint firstAttribute="width" constant="60" id="thl-Zu-WGu"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal">
+                                    <imageReference key="image" image="plus" catalog="system" symbolScale="large"/>
+                                </state>
                                 <connections>
-                                    <segue destination="CgR-sG-r19" kind="show" id="KmO-RQ-qq2"/>
+                                    <action selector="floating" destination="Y6W-OH-hqX" eventType="touchUpInside" id="ctX-gK-iPB"/>
                                 </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="ppO-t2-8dE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="50" id="1yL-zD-t2e"/>
+                            <constraint firstItem="ppO-t2-8dE" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="1yL-zD-t2e"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="vfe-og-3Zl" secondAttribute="trailing" constant="40" id="BgX-VR-fEi"/>
                             <constraint firstItem="ppO-t2-8dE" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="NWn-nT-FgN"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="vfe-og-3Zl" secondAttribute="bottom" constant="60" id="Utz-qz-M5g"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="ppO-t2-8dE" secondAttribute="trailing" id="iQp-qv-z4Q"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="ppO-t2-8dE" secondAttribute="bottom" id="mah-2Q-lvf"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="pHb-wg-tDi"/>
+                    <navigationItem key="navigationItem" id="Z0l-30-4oo"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="floatingButton" destination="vfe-og-3Zl" id="JQI-au-35j"/>
                         <outlet property="tableView" destination="ppO-t2-8dE" id="XyP-KW-rlY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="83"/>
+            <point key="canvasLocation" x="928.98550724637687" y="82.366071428571431"/>
         </scene>
         <!--Detail Inquiry View Controller-->
         <scene sceneID="7md-9z-PRA">
             <objects>
                 <viewController storyboardIdentifier="DetailInquiryViewController" id="CgR-sG-r19" customClass="DetailInquiryViewController" customModule="iMAC_Torip" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mKx-jW-MBe">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Xn-4R-qWw">
-                                <rect key="frame" x="0.0" y="44" width="414" height="798"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fun-b2-6eN">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="993.5"/>
@@ -230,11 +241,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Q0u-ae-SlI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="868.11594202898561" y="90.401785714285708"/>
+            <point key="canvasLocation" x="1778.2608695652175" y="90.401785714285708"/>
         </scene>
     </scenes>
     <resources>
         <image name="nonselectedHeart" width="341" height="341"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

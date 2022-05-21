@@ -36,6 +36,7 @@ class SearchViewController: UIViewController {
         viewModel = SearchViewModel(list: list)
         viewModel?.list = list
         searchBar.delegate = self
+        tableView.delegate = self
     }
     
     private func configureDataSource() {
@@ -83,6 +84,13 @@ class SearchViewController: UIViewController {
     
 }
 
+extension SearchViewController:UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let list = list[indexPath.row]
+        self.goToDetail(item: list)
+    }
+}
+
 extension SearchViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         performQuery(with: searchText)
@@ -91,9 +99,9 @@ extension SearchViewController: UISearchBarDelegate {
 
 extension SearchViewController {
     func goToDetail(item: HomeCell) {
-        //let detailVC = UIStoryboard(name: "Home", bundle: nil)
-        //detailVC.instantiateViewController(withIdentifier: "") as? DetailView
-//        detailVC.item = item
-//        self.navigationController?.pushViewController(detailVC, animated: true)
+        let detailVC = UIStoryboard(name: "Home", bundle: nil)
+        let vc = detailVC.instantiateViewController(withIdentifier: "DetailInquiryViewController") as! DetailInquiryViewController
+       // detailVC.item = item
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
