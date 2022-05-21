@@ -37,6 +37,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var driverCount: UIStepper!
     @IBOutlet weak var userCount: UIStepper!
     @IBOutlet weak var moreInfoText: UITextView!
+    @IBOutlet weak var texfield: UITextField!
+    
+    @IBAction func doneButton() {
+        self.alertViewController(title: "글 작성 완료", message: "글 작성이 완료 되었습니다.", completion: { str in })
+        self.navigationController?.popViewController(animated: true)
+    }
     
     var item = [(String, String)]()
     @IBAction func userCountValueChanged(sender: UIStepper) {
@@ -63,6 +69,7 @@ class DetailViewController: UIViewController {
         profileImageView.isUserInteractionEnabled = true
         let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped))
         tapGestureRecognizer.numberOfTapsRequired = 1
+        tapGestureRecognizer.cancelsTouchesInView = false
         profileImageView.addGestureRecognizer(tapGestureRecognizer)
         collectionviewSetting()
     }
@@ -122,6 +129,9 @@ class DetailViewController: UIViewController {
         userCount.wraps = true
         userCount.autorepeat = true
         userCount.maximumValue = 5
+    }
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.view.endEditing(true)
     }
     
     @objc func touch(sender: UITapGestureRecognizer) {
