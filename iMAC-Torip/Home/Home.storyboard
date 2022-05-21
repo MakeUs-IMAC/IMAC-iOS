@@ -33,6 +33,9 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Item" id="pHb-wg-tDi"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="ppO-t2-8dE" id="XyP-KW-rlY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
