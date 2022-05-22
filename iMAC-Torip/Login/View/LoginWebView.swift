@@ -12,7 +12,6 @@ struct LoginWebView: UIViewRepresentable{
     @Environment(\.presentationMode) fileprivate var presentationMode
     private let urlToLoad: URL
     
-    
     init(_ snsLogin: SnsLogin){
         self.urlToLoad = snsLogin.url
     }
@@ -43,6 +42,7 @@ struct LoginWebView: UIViewRepresentable{
 extension LoginWebView.Coordinator: WKNavigationDelegate{
     func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let _ = UserDefaults.standard.string(forKey: "token"){
+            decisionHandler(.cancel)
             dismiss()
             return
         }
@@ -64,7 +64,7 @@ extension LoginWebView.Coordinator: WKNavigationDelegate{
             let jwt = jwtQuery[url.index(after: jwtQuery.firstIndex(of: "=")!)...]
             let id = idQuery[url.index(after: idQuery.firstIndex(of: "=")!)...]
             UserDefaults.standard.setValue(jwt, forKey: "token")
-            UserDefaults.standard.setValue(jwt, forKey: "id")
+            UserDefaults.standard.setValue(id, forKey: "id")
             
             dismiss()
             return

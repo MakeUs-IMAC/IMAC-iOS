@@ -16,6 +16,8 @@ struct ProfileFormView: View {
     @State private var genderTag = 0
     @State private var ageTag = 0
     @State private var carTypeTag = 0
+    @State private var shouldShowNextView = false
+    
     
     var body: some View {
         ScrollView(.vertical, showsIndicators: false){
@@ -83,6 +85,9 @@ struct ProfileFormView: View {
                 }
                 Button{
                     print("\(viewModel.role) \(viewModel.nickname) \(viewModel.contract) \(viewModel.age) \(viewModel.carType)")
+                    viewModel.registProfile{
+                        shouldShowNextView = $0
+                    }
                 }label: {
                     Text("작성 완료")
                         .font(.system(size: 18, weight:.bold))
@@ -96,6 +101,8 @@ struct ProfileFormView: View {
         .padding(.top, 50)
         .onAppear{
             UIScrollView.appearance().bounces = false
+        }.fullScreenCover(isPresented: $shouldShowNextView){
+            TabBarViewUIRepresentable()
         }
     }
     

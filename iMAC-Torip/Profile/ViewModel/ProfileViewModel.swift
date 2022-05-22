@@ -17,8 +17,7 @@ class ProfileViewModel: ObservableObject{
     var age: Age = .teen
     var carType: CarType = .compactCar
    
-    
-    private var profile: ProfileResponse.Result? = nil
+    private var profile: Profile? = nil
     
     func checkPresenceOfProfile(completion: ((Bool, Error?) -> Void)? = nil){
         let provider = MoyaProvider<ProfileApi>()
@@ -26,8 +25,9 @@ class ProfileViewModel: ObservableObject{
         provider.request(.checkPresenceOfProfile){
             switch $0{
             case let .success(response):
+//                print(try! response.mapJSON())
                 self.profile = try? response.map(ProfileResponse.self).result
-                completion?(true, nil)
+                completion?(self.profile!.nickName != "", nil)
             case let .failure(error):
                 if error.errorCode == 404{
                     completion?(false, nil)
@@ -35,6 +35,26 @@ class ProfileViewModel: ObservableObject{
                 else{
                     completion?(false, error)
                 }
+            }
+        }
+    }
+    
+    func registProfile(completion: ((Bool) -> Void)? = nil){
+        let provider = MoyaProvider<ProfileApi>()
+        
+        provider.request(.registPorfile(Profile(role: role, nickname: nickname, phone: contract, age: age, gender: gender, carType: carType))){
+            switch $0{
+            case let .success(response):
+                if response.statusCode >= 200 && response.statusCode <= 300{
+                    completion?(true)
+                }
+                else{
+                    print(response.statusCode)
+                    completion?(false)
+                }
+            case let .failure(error):
+                completion?(false)
+                print(error.localizedDescription)
             }
         }
     }

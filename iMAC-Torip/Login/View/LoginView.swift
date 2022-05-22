@@ -66,24 +66,34 @@ struct LoginView: View {
                 ProfileFormView()
             }
         }.fullScreenCover(isPresented: $shouldShowKakaoLoginView){
-            decideNextView()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                decideNextView()
+            }
         }content:{
             LoginWebView(.kakao)
         }
         .fullScreenCover(isPresented: $shouldShowNaverLoginView){
-            decideNextView()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                decideNextView()
+            }
         }content:{
             LoginWebView(.naver)
         }
         .fullScreenCover(isPresented: $shouldShowGoogleLoginView){
-            decideNextView()
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                decideNextView()
+            }
         }content:{
             LoginWebView(.google)
+        }.onChange(of: shouldShowNextView){_ in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                decideNextView()
+            }
+        }.onAppear{
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+                decideNextView()
+            }
         }
-        .onAppear{
-            decideNextView()
-        }
-
         
     }
     
@@ -102,7 +112,6 @@ struct LoginView: View {
                     else{
                         self.nextView = .profileForm
                     }
-                    
                     self.shouldShowNextView = true
                 }
                 else{
