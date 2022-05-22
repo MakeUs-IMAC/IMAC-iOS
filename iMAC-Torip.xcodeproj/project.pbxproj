@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		061F79CD2839BFE00095AEAD /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F79CC2839BFE00095AEAD /* UserRole.swift */; };
+		061F79CF2839C0030095AEAD /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F79CE2839C0030095AEAD /* Profile.swift */; };
 		0653980C28397D2400D18B45 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653980B28397D2400D18B45 /* ProfileViewModel.swift */; };
 		0653980F28397D9A00D18B45 /* ProfileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653980E28397D9A00D18B45 /* ProfileApi.swift */; };
 		0653981428397F1D00D18B45 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653981328397F1D00D18B45 /* ProfileResponse.swift */; };
-		0653981628398C8A00D18B45 /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653981528398C8A00D18B45 /* UserRole.swift */; };
-		065398182839954E00D18B45 /* ProfileListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065398172839954E00D18B45 /* ProfileListView.swift */; };
-		0653981A2839975E00D18B45 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 065398192839975E00D18B45 /* Profile.swift */; };
 		06910A03283958D3007FE412 /* Color + Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A02283958D3007FE412 /* Color + Extension.swift */; };
 		06910A09283958EA007FE412 /* LoginWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A06283958EA007FE412 /* LoginWebView.swift */; };
 		06910A0A283958EA007FE412 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06910A07283958EA007FE412 /* LoginView.swift */; };
@@ -91,12 +90,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		061F79CC2839BFE00095AEAD /* UserRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
+		061F79CE2839C0030095AEAD /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = "iMAC-Torip/Profile/Model/Profile.swift"; sourceTree = SOURCE_ROOT; };
 		0653980B28397D2400D18B45 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		0653980E28397D9A00D18B45 /* ProfileApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApi.swift; sourceTree = "<group>"; };
 		0653981328397F1D00D18B45 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
-		0653981528398C8A00D18B45 /* UserRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
-		065398172839954E00D18B45 /* ProfileListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListView.swift; sourceTree = "<group>"; };
-		065398192839975E00D18B45 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		06910A02283958D3007FE412 /* Color + Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color + Extension.swift"; sourceTree = "<group>"; };
 		06910A06283958EA007FE412 /* LoginWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginWebView.swift; sourceTree = "<group>"; };
 		06910A07283958EA007FE412 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -211,6 +209,7 @@
 		0653980A28397D1300D18B45 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				061F79CE2839C0030095AEAD /* Profile.swift */,
 				0653980B28397D2400D18B45 /* ProfileViewModel.swift */,
 			);
 			path = ViewModel;
@@ -228,7 +227,6 @@
 			isa = PBXGroup;
 			children = (
 				0653981328397F1D00D18B45 /* ProfileResponse.swift */,
-				065398192839975E00D18B45 /* Profile.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -264,7 +262,6 @@
 			isa = PBXGroup;
 			children = (
 				06910A1028396A61007FE412 /* ProfileFormView.swift */,
-				065398172839954E00D18B45 /* ProfileListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -273,9 +270,9 @@
 			isa = PBXGroup;
 			children = (
 				06910A1328396CFC007FE412 /* Gender.swift */,
+				061F79CC2839BFE00095AEAD /* UserRole.swift */,
 				06910A15283970B9007FE412 /* Age.swift */,
 				06910A1728397286007FE412 /* CarType.swift */,
-				0653981528398C8A00D18B45 /* UserRole.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -726,16 +723,16 @@
 				06910A1828397286007FE412 /* CarType.swift in Sources */,
 				E92A3FC728391D3D009DF54C /* TravelRouteArrowCollectionViewCell.swift in Sources */,
 				06910A03283958D3007FE412 /* Color + Extension.swift in Sources */,
+				061F79CF2839C0030095AEAD /* Profile.swift in Sources */,
 				E92A3FC228390C58009DF54C /* DetailInquiry.swift in Sources */,
 				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
 				E92A3FB72838DD6F009DF54C /* DetailInquiryViewController.swift in Sources */,
+				061F79CD2839BFE00095AEAD /* UserRole.swift in Sources */,
 				E92A3FBB2838E229009DF54C /* TravelRouteCollectionViewCell.swift in Sources */,
 				0653981428397F1D00D18B45 /* ProfileResponse.swift in Sources */,
 				8E81346B283986E600078711 /* PostAPI.swift in Sources */,
 				8E3A512228391E1B00E9F2A6 /* CalendarViewController.swift in Sources */,
-				0653981A2839975E00D18B45 /* Profile.swift in Sources */,
-				0653981628398C8A00D18B45 /* UserRole.swift in Sources */,
-				8E81346428397FD100078711 /* HeaderView.swift in Sources */
+				8E81346428397FD100078711 /* HeaderView.swift in Sources */,
 				8E3A50DD28390D4F00E9F2A6 /* PostCodeInputViewController.swift in Sources */,
 				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
 				8E3A50DB2838DC7600E9F2A6 /* UIImage+UIButton.swift in Sources */,
@@ -767,7 +764,6 @@
 				8E3A508F2838C73000E9F2A6 /* SceneDelegate.swift in Sources */,
 				E92A3FB32838DBD8009DF54C /* DetailInquiryViewModel.swift in Sources */,
 				06910A16283970B9007FE412 /* Age.swift in Sources */,
-				065398182839954E00D18B45 /* ProfileListView.swift in Sources */,
 				8E8134702839922C00078711 /* DateParser.swift in Sources */,
 				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
 			);

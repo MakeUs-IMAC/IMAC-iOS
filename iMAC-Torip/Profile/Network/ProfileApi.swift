@@ -10,7 +10,7 @@ import Moya
 
 enum ProfileApi: TargetType{
     case checkPresenceOfProfile
-    case registPorfile(_ profile: Profile)
+    case registProfile(_ profile: Profile)
     var baseURL: URL{
         return URL(string: "https://jinbeom.shop")!
     }
@@ -26,7 +26,7 @@ enum ProfileApi: TargetType{
         switch self {
         case .checkPresenceOfProfile:
             return .get
-        case .registPorfile(_):
+        case .registProfile(_):
             return .post
         }
     }
@@ -35,7 +35,7 @@ enum ProfileApi: TargetType{
         switch self {
         case .checkPresenceOfProfile:
             return .requestPlain
-        case .registPorfile(let profile):
+        case .registProfile(let profile):
             let parameters: [String: Any] = [
                 "age": profile.age,
                 "carType": profile.carType,
@@ -44,6 +44,7 @@ enum ProfileApi: TargetType{
                 "phone": profile.phone,
                 "role": profile.role
             ]
+            print(parameters)
             return .requestParameters(parameters:parameters, encoding: JSONEncoding.default)
         }
     }
