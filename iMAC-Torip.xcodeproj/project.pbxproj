@@ -10,6 +10,7 @@
 		061F79CD2839BFE00095AEAD /* UserRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F79CC2839BFE00095AEAD /* UserRole.swift */; };
 		061F79CF2839C0030095AEAD /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F79CE2839C0030095AEAD /* Profile.swift */; };
 		061F79D12839C44E0095AEAD /* ProfileListMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F79D02839C44E0095AEAD /* ProfileListMenuView.swift */; };
+		061F79D32839CF560095AEAD /* FavoriatePostListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 061F79D22839CF560095AEAD /* FavoriatePostListView.swift */; };
 		0653980C28397D2400D18B45 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653980B28397D2400D18B45 /* ProfileViewModel.swift */; };
 		0653980F28397D9A00D18B45 /* ProfileApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653980E28397D9A00D18B45 /* ProfileApi.swift */; };
 		0653981428397F1D00D18B45 /* ProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0653981328397F1D00D18B45 /* ProfileResponse.swift */; };
@@ -95,6 +96,7 @@
 		061F79CC2839BFE00095AEAD /* UserRole.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserRole.swift; sourceTree = "<group>"; };
 		061F79CE2839C0030095AEAD /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Profile.swift; path = "iMAC-Torip/Profile/Model/Profile.swift"; sourceTree = SOURCE_ROOT; };
 		061F79D02839C44E0095AEAD /* ProfileListMenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListMenuView.swift; sourceTree = "<group>"; };
+		061F79D22839CF560095AEAD /* FavoriatePostListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriatePostListView.swift; sourceTree = "<group>"; };
 		0653980B28397D2400D18B45 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		0653980E28397D9A00D18B45 /* ProfileApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileApi.swift; sourceTree = "<group>"; };
 		0653981328397F1D00D18B45 /* ProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileResponse.swift; sourceTree = "<group>"; };
@@ -267,6 +269,7 @@
 			children = (
 				06910A1028396A61007FE412 /* ProfileFormView.swift */,
 				061F79D02839C44E0095AEAD /* ProfileListMenuView.swift */,
+				061F79D22839CF560095AEAD /* FavoriatePostListView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -727,6 +730,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				06910A1828397286007FE412 /* CarType.swift in Sources */,
+				061F79D32839CF560095AEAD /* FavoriatePostListView.swift in Sources */,
 				E92A3FC728391D3D009DF54C /* TravelRouteArrowCollectionViewCell.swift in Sources */,
 				06910A03283958D3007FE412 /* Color + Extension.swift in Sources */,
 				061F79CF2839C0030095AEAD /* Profile.swift in Sources */,

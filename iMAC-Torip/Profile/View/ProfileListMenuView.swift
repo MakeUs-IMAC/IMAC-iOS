@@ -12,7 +12,7 @@ struct ProfileListMenuView: View {
     var body: some View {
         NavigationView{
             List{
-                NavigationLink( destination: Text("")){
+                NavigationLink( destination: FavoriatePostListView()){
                     HStack{
                         Text("관심목록")
                         Spacer()

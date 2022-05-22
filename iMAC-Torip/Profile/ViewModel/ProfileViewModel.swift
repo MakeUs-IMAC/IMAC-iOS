@@ -20,6 +20,8 @@ class ProfileViewModel: ObservableObject{
 //    private var myProfile: Profile? = nil
     public private(set) var profile: Profile? = nil
     
+    
+    
     func checkPresenceOfProfile(completion: ((Bool, Error?) -> Void)? = nil){
         let provider = MoyaProvider<ProfileApi>()
         
@@ -63,6 +65,27 @@ class ProfileViewModel: ObservableObject{
                 }
             case let .failure(error):
                 completion?(false)
+                print(error.localizedDescription)
+            }
+        }
+    }
+    
+    func favoriatePostList(completion: @escaping ([GetPosts]) -> Void){
+        let provider = MoyaProvider<PostAPI>()
+        provider.request(.getFavoritePosts){
+            switch $0{
+            case .success(let response):
+                if response.statusCode >= 200 && response.statusCode <= 300{
+                    let result = (try! response.mapJSON() as! [String: Any])["result"]
+                    let posts = result.map{$0 as! [GetPosts]}!
+                    completion(posts)
+                }
+                else{
+                    completion([])
+                    print(response.statusCode)
+                }
+            case .failure(let error):
+                completion([])
                 print(error.localizedDescription)
             }
         }
