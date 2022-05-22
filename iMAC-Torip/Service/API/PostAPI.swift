@@ -29,8 +29,6 @@ extension PostAPI: TargetType {
             return "/post/\(postId)"
         case .getDetailPost(let postId):
             return "/post/\(postId)"
-        case .getPost(_):
-            return "/post"
         case .getFavoritePosts:
             return "/member/favorites/\(UserDefaults.standard.integer(forKey: "id"))"
         case .getPost(
