@@ -13,6 +13,7 @@ enum PostAPI {
     case getDetailPost(postId: Int)
     case updateStatus(postId: Int, status: String)
     case create(post: CreatePost)
+    case getFavoritePosts
 }
 
 extension PostAPI: TargetType {
@@ -30,6 +31,8 @@ extension PostAPI: TargetType {
             return "/post/\(postId)"
         case .getPost(_):
             return "/post"
+        case .getFavoritePosts:
+            return "/member/favorites/\(UserDefaults.standard.integer(forKey: "id"))"
         }
     }
     
@@ -41,6 +44,8 @@ extension PostAPI: TargetType {
             return .patch
         case .create(_):
             return .post
+        case .getFavoritePosts:
+            return .get
         }
     }
     
@@ -58,6 +63,8 @@ extension PostAPI: TargetType {
             return .requestParameters(parameters: ["postId" : postId], encoding: URLEncoding.queryString)
         case .updateStatus(_, let status):
             return .requestParameters(parameters: ["travelStatus" : status], encoding: JSONEncoding.default)
+        case .getFavoritePosts:
+            return .requestPlain
         }
     }
     
@@ -66,7 +73,7 @@ extension PostAPI: TargetType {
         switch self {
         case .create(_):
             return ["Content-Type": "multipart/form-data", "x-access-token" : jwtToken]
-        case .updateStatus(_, _), .getPost(_), .getDetailPost(_):
+        case .updateStatus(_, _), .getPost(_), .getDetailPost(_),.getFavoritePosts:
             return ["x-access-token" : jwtToken]
         }
     }
