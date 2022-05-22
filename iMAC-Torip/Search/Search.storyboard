@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,7 +11,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Search View Controller-->
         <scene sceneID="s0d-6b-0kx">
             <objects>
                 <viewController storyboardIdentifier="SearchViewController" id="Y6W-OH-hqX" customClass="SearchViewController" customModule="iMAC_Torip" customModuleProvider="target" sceneMemberID="viewController">
@@ -38,7 +38,7 @@
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nhN-KB-12x" secondAttribute="bottom" id="L5D-2K-nvB"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="N8v-6i-lVq"/>
+                    <tabBarItem key="tabBarItem" title="" selectedImage="magnifyingglass" catalog="system" id="N8v-6i-lVq"/>
                     <navigationItem key="navigationItem" id="LyK-kO-IGv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -631,6 +631,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
         <image name="questionmark.app.dashed" catalog="system" width="128" height="114"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
