@@ -8,12 +8,17 @@
 import SwiftUI
 
 class ProfileViewController: UIViewController {
-
-    @IBSegueAction func addSwiftUiView(_ coder: NSCoder) -> UIViewController? {
-        return UIHostingController(coder: coder, rootView: ProfileListMenuView())
+    private let viewModel = ProfileViewModel()
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        viewModel.checkPresenceOfProfile()
     }
     
-
+    @IBSegueAction func addSwiftUiView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: ProfileListMenuView().environmentObject(viewModel))
+    }
+    
     /*
     // MARK: - Navigation
 

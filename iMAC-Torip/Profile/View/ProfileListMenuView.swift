@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProfileListMenuView: View {
-    //    @EnvironmentObject private var viewModel: ProfileViewModel
+    @EnvironmentObject private var viewModel: ProfileViewModel
     var body: some View {
         NavigationView{
             List{
@@ -18,11 +18,23 @@ struct ProfileListMenuView: View {
                         Spacer()
                     }
                 }
-                NavigationLink(destination: Text("")){
-                    HStack{
-                        Text("내가 쓴 글 목록")
-                        Spacer()
+                
+                if viewModel.profile?.role == UserRole.traveler.englishRawValue{
+                    NavigationLink(destination: Text("")){
+                        HStack{
+                            Text("내가 쓴 글 목록")
+                            Spacer()
+                        }
                     }
+                }
+                else{
+                    NavigationLink(destination: Text("")){
+                        HStack{
+                            Text("후기 관리")
+                            Spacer()
+                        }
+                    }
+                    
                 }
                 NavigationLink(destination:Text("")){
                     HStack{
@@ -30,14 +42,15 @@ struct ProfileListMenuView: View {
                         Spacer()
                     }
                 }
-                NavigationLink( destination: Text("")){
-                    HStack{
-                        Text("여행 관리")
-                        Spacer()
+                
+                if viewModel.profile?.role == UserRole.traveler.englishRawValue{
+                    NavigationLink( destination: Text("")){
+                        HStack{
+                            Text("여행 관리")
+                            Spacer()
+                        }
                     }
                 }
-                
-                
             }.listStyle(.grouped)
                 .navigationTitle("")
                 .navigationBarHidden(true)
