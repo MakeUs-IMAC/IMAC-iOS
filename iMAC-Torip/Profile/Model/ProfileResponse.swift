@@ -7,14 +7,5 @@
 
 import Foundation
 struct ProfileResponse: Codable{
-    var result: Result
-    
-    struct Result: Codable{
-        var carType: String
-        var gender: String
-        var image: String
-        var nickName: String
-        var phone: String
-        var role: String
-    }
+    var result: Profile
 }
