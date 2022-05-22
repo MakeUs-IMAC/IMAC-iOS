@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gwx-v0-KqH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gwx-v0-KqH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -70,11 +70,11 @@
             </objects>
             <point key="canvasLocation" x="2833.3333333333335" y="532.36607142857144"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="qaU-ep-bLu">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="hwe-GA-pke" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vfp-Ae-6BA"/>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="vfp-Ae-6BA"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="ceD-6e-ZBc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -89,11 +89,11 @@
             </objects>
             <point key="canvasLocation" x="1955.072463768116" y="-477.45535714285711"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="g4t-Jq-xbI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="hef-vz-5u9" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="ZrC-ew-uPq"/>
+                    <tabBarItem key="tabBarItem" title="" image="magnifyingglass" catalog="system" id="ZrC-ew-uPq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pb8-N9-vhR">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -108,11 +108,11 @@
             </objects>
             <point key="canvasLocation" x="2869.5652173913045" y="-141.29464285714286"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="egq-rF-zqb">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="EIa-z7-q3Z" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="3aS-w4-heu"/>
+                    <tabBarItem key="tabBarItem" title="" image="bell.fill" catalog="system" selectedImage="bell.fill" id="3aS-w4-heu"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qis-YA-osJ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -127,11 +127,11 @@
             </objects>
             <point key="canvasLocation" x="4000.0000000000005" y="347.54464285714283"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="xc3-au-OD9">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="aMT-4y-piR" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="DZr-Dw-kAJ"/>
+                    <tabBarItem key="tabBarItem" title="" image="person.fill" catalog="system" id="DZr-Dw-kAJ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="py1-8a-mJX">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -185,6 +185,10 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bell.fill" catalog="system" width="128" height="124"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

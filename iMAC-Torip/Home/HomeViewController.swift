@@ -26,7 +26,7 @@ class HomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        tableView.estimatedRowHeight = 55
         viewModel = HomeViewModel()
         bindViewModel()
         DispatchQueue.main.asyncAfter (deadline: .now() + .seconds(2)) {
@@ -63,11 +63,6 @@ class HomeViewController: UIViewController {
     
     func bindViewModel() {
         let input = HomeViewModel.Input(viewWillAppearEvent: self.rx.methodInvoked(#selector(UIViewController.viewWillAppear)).map { _ in }, floatingButton: self.floatingButton.rx.tap.asObservable(), cellDidTap: self.tableView.rx.itemSelected.asObservable())
-
-        input.floatingButton
-            .subscribe(onNext: {
-                self.goToWrite()
-            }).disposed(by: disposeBag)
         
         let output = viewModel.transform(from: input, disposeBag: viewModel.disposeBag)
         output.goToDetailCell
