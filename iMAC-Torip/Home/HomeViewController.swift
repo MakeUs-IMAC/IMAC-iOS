@@ -99,7 +99,8 @@ extension HomeViewController {
     func goToDetail(item: GetPosts) {
         let storyBoard = UIStoryboard(name: "Home", bundle: nil)
         let detailVC = storyBoard.instantiateViewController(withIdentifier: "DetailInquiryViewController") as! DetailInquiryViewController
-        //detailVC.item = item
+//        detailVC.viewModel.info = item
+        detailVC.viewModel.postId = item.id
         self.navigationController?.pushViewController(detailVC, animated: true)
     }
 }

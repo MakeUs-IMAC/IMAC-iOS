@@ -24,7 +24,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dbw-iQ-eH9">
-                        <rect key="frame" x="10" y="168" width="230" height="21"/>
+                        <rect key="frame" x="10" y="178" width="230" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -32,14 +32,13 @@
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
-            <color key="backgroundColor" red="0.30196078430000001" green="0.30588235289999999" blue="0.51372549020000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Yj9-mX-eIw" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="Si3-Mu-xBk"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Dbw-iQ-eH9" secondAttribute="trailing" constant="10" id="b2Z-7n-gaL"/>
                 <constraint firstItem="Dbw-iQ-eH9" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="10" id="bKJ-ev-Y4Z"/>
                 <constraint firstItem="Yj9-mX-eIw" firstAttribute="top" secondItem="ZTg-uK-7eu" secondAttribute="top" constant="15" id="cCQ-UF-hWp"/>
                 <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="Yj9-mX-eIw" secondAttribute="trailing" id="lmY-1k-1Yn"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="Dbw-iQ-eH9" secondAttribute="bottom" constant="20" id="pFy-Nh-hRH"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="Dbw-iQ-eH9" secondAttribute="bottom" constant="10" id="pFy-Nh-hRH"/>
             </constraints>
             <size key="customSize" width="250" height="209"/>
             <connections>

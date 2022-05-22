@@ -8,7 +8,9 @@
 import UIKit
 
 class ParticipantTableViewCell: UITableViewCell {
-
+    @IBOutlet weak var nickNameLabel: UILabel!
+    @IBOutlet weak var additionalInfoLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
