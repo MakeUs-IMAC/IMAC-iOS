@@ -20,23 +20,28 @@ import RxCocoa
 class SearchViewController: UIViewController {
    
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var textField: UITextField!
     
     let disposeBag = DisposeBag()
     private var section = 0
     var dataSource: UITableViewDiffableDataSource<Int, GetPosts>! = nil
     var currentSnapshot: NSDiffableDataSourceSnapshot<Int, GetPosts>! = nil
 
-    var viewModel: SearchViewModel?
+    var viewModel = SearchViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
-        configureDataSource()
-        viewModel = SearchViewModel()
-        searchBar.delegate = self
+        DispatchQueue.main.asyncAfter (deadline: .now() + .seconds(2)) {
+            self.configureDataSource()
+        }
+        textField.delegate = self
         tableView.delegate = self
+        self.textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
     }
+    @objc func textFieldDidChange(_ sender: Any?) {
+        self.performQuery(with: textField.text)
+        }
     
     private func configureDataSource() {
         tableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
@@ -53,7 +58,7 @@ class SearchViewController: UIViewController {
         var snapshot = NSDiffableDataSourceSnapshot<Int, GetPosts>()
         snapshot.appendSections([section])
         section += 1
-        snapshot.appendItems(viewModel?.list ?? [])
+        snapshot.appendItems(viewModel.list)
         dataSource.apply(snapshot)
     }
     
@@ -63,18 +68,19 @@ class SearchViewController: UIViewController {
     }
     
     func performQuery(with filter: String?) {
-        let filtered = viewModel?.list.filter { ($0.region.hasPrefix(filter ?? "" ))}
-        print(filtered)
+
+        let filtered = viewModel.list.filter { ($0.region.lowercased().hasPrefix(filter?.lowercased() ?? "" ))}
+        
         var snapshot = NSDiffableDataSourceSnapshot<Int, GetPosts>()
         snapshot.appendSections([section])
-        snapshot.appendItems(filtered ?? [])
+        snapshot.appendItems(filtered)
         dataSource.apply(snapshot, animatingDifferences: true)
     }
     
     func bindViewModel() {
-        let input = SearchViewModel.Input(viewWillAppearEvent: self.rx.methodInvoked(#selector(UIViewController.viewWillAppear)).map { _ in }, textBeginChanging: self.searchBar.rx.textDidBeginEditing.asObservable(), cellDidTap: self.tableView.rx.itemSelected.asObservable(), searchText: self.searchBar.rx.text.orEmpty.asObservable())
+        let input = SearchViewModel.Input(viewWillAppearEvent: self.rx.methodInvoked(#selector(UIViewController.viewWillAppear)).map { _ in }, cellDidTap: self.tableView.rx.itemSelected.asObservable(), searchText: self.textField.rx.text.orEmpty.asObservable())
 
-        let output = viewModel?.transform(from: input, disposeBag: viewModel?.disposeBag ?? self.disposeBag)
+        let output = viewModel.transform(from: input, disposeBag: viewModel.disposeBag)
      
     }
     
@@ -82,14 +88,23 @@ class SearchViewController: UIViewController {
 
 extension SearchViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let list = viewModel!.list[indexPath.row]
+        let list = viewModel.list[indexPath.row]
         self.goToDetail(item: list)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-extension SearchViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        performQuery(with: searchText)
+extension SearchViewController: UITextFieldDelegate {
+    func textfil(_ textField: UITextField) {
+        self.performQuery(with: textField.text ?? "")
+    }
+
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        self.performQuery(with: textField.text ?? "")
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
     }
 }
 

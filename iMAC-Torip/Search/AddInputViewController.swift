@@ -16,6 +16,7 @@ class AddInputViewController: UIViewController {
     @IBOutlet weak var doneButton: UIButton!
     var addressData = ""
     let disposeBag = DisposeBag()
+    var section = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
@@ -34,11 +35,12 @@ class AddInputViewController: UIViewController {
     private func bindViewModel(){
         doneButton.rx.tap
             .subscribe(onNext: { _ in
-                //to do data 전달
-                //let rootView =  self.presentingViewController?.presentingViewController as? DetailViewController
-              
-                  // rootView!.item.append((self.titleTextField.text!, self.addressTextField.text!))
-                self.dismiss(animated: true)
+                let controller = self.navigationController?.viewControllers[(self.navigationController?.viewControllers.count)! - 3] as! DetailViewController
+            
+//                controller.item.append((self.section, self.titleTextField.text!, self.addressTextField.text!))
+                controller.sectionArray[self.section].append((self.titleTextField.text!, self.addressTextField.text!))
+                //print(controller.item)
+                self.navigationController?.popToViewController(controller, animated: true)
                 
             }).disposed(by: disposeBag)
     }

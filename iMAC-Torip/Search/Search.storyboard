@@ -20,30 +20,40 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nhN-KB-12x">
-                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <rect key="frame" x="0.0" y="94" width="414" height="719"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
-                            <searchBar contentMode="redraw" id="tdC-y9-4c2">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="검색어를 입력해주세요" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="1RA-Px-wZa">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="jMP-Rg-ObF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
-                            </searchBar>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="nhN-KB-12x" firstAttribute="top" secondItem="tdC-y9-4c2" secondAttribute="bottom" id="1tC-Jo-tIA"/>
+                            <constraint firstItem="nhN-KB-12x" firstAttribute="top" secondItem="1RA-Px-wZa" secondAttribute="bottom" id="18T-TG-ug5"/>
                             <constraint firstItem="nhN-KB-12x" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="6u4-aq-gWc"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="nhN-KB-12x" secondAttribute="trailing" id="A2a-Yd-9JQ"/>
+                            <constraint firstItem="1RA-Px-wZa" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="BVW-Yv-aIq"/>
+                            <constraint firstItem="1RA-Px-wZa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="GNm-cR-W8b"/>
+                            <constraint firstItem="1RA-Px-wZa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="Jgz-rC-HWV"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="nhN-KB-12x" secondAttribute="bottom" id="L5D-2K-nvB"/>
+                            <constraint firstItem="1RA-Px-wZa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="hXP-fg-AC6"/>
+                            <constraint firstItem="nhN-KB-12x" firstAttribute="top" secondItem="1RA-Px-wZa" secondAttribute="bottom" id="neA-E9-F3q"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="1RA-Px-wZa" secondAttribute="trailing" id="pKp-Jv-gCf"/>
+                            <constraint firstItem="1RA-Px-wZa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="rfc-o2-Txm"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" selectedImage="magnifyingglass" catalog="system" id="N8v-6i-lVq"/>
                     <navigationItem key="navigationItem" id="LyK-kO-IGv"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="searchBar" destination="tdC-y9-4c2" id="NEB-NT-CYv"/>
                         <outlet property="tableView" destination="nhN-KB-12x" id="jgS-qY-7qj"/>
+                        <outlet property="textField" destination="1RA-Px-wZa" id="Phh-lq-j93"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
