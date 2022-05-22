@@ -9,13 +9,13 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-struct HomeCell: Hashable {
-    var id = UUID()
-    var imageURL: String
-    var title: String
-    var date: String
-    var count: Int
-}
+//struct HomeCell: Hashable {
+//    var id = UUID()
+//    var imageURL: String
+//    var title: String
+//    var date: String
+//    var count: Int
+//}
 
 class SearchViewController: UIViewController {
    
@@ -24,37 +24,36 @@ class SearchViewController: UIViewController {
     
     let disposeBag = DisposeBag()
     private var section = 0
-    var dataSource: UITableViewDiffableDataSource<Int, HomeCell>! = nil
-    var currentSnapshot: NSDiffableDataSourceSnapshot<Int, HomeCell>! = nil
-    var list = [HomeCell(imageURL: "", title: "1", date: "d", count: 1), HomeCell(imageURL: "", title: "2", date: "c", count: 2)]
+    var dataSource: UITableViewDiffableDataSource<Int, GetPosts>! = nil
+    var currentSnapshot: NSDiffableDataSourceSnapshot<Int, GetPosts>! = nil
+
     var viewModel: SearchViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         bindViewModel()
         configureDataSource()
-        viewModel = SearchViewModel(list: list)
-        viewModel?.list = list
+        viewModel = SearchViewModel()
         searchBar.delegate = self
         tableView.delegate = self
     }
     
     private func configureDataSource() {
         tableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
-        dataSource = UITableViewDiffableDataSource<Int, HomeCell>(tableView: tableView) { (tableView, indexPath, item) -> HomeTableViewCell? in let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
-            cell.titleLabel.text = item.title
-            cell.placeLabel.text = item.date
-            cell.palceImageView.image = UIImage(systemName: "heart.fill")
-            cell.countButton.setTitle("\(item.count)명", for: .normal)
+        dataSource = UITableViewDiffableDataSource<Int, GetPosts>(tableView: tableView) { (tableView, indexPath, item) -> HomeTableViewCell? in let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
+            cell.titleLabel.text = item.region
+            cell.placeLabel.text = "\(item.start) 부터 \(item.end)까지"
+            cell.palceImageView.sd_setImage(with: URL(string: item.image))
+            cell.countButton.setTitle("\(item.participants)명", for: .normal)
             return cell
         }
         dataSource.defaultRowAnimation = .fade
         tableView.dataSource = dataSource
         // 빈 snapshot
-        var snapshot = NSDiffableDataSourceSnapshot<Int, HomeCell>()
+        var snapshot = NSDiffableDataSourceSnapshot<Int, GetPosts>()
         snapshot.appendSections([section])
         section += 1
-        snapshot.appendItems(list)
+        snapshot.appendItems(viewModel?.list ?? [])
         dataSource.apply(snapshot)
     }
     
@@ -64,11 +63,11 @@ class SearchViewController: UIViewController {
     }
     
     func performQuery(with filter: String?) {
-        let filtered = list.filter { ($0.title.hasPrefix(filter ?? "" ))}
+        let filtered = viewModel?.list.filter { ($0.region.hasPrefix(filter ?? "" ))}
         print(filtered)
-        var snapshot = NSDiffableDataSourceSnapshot<Int, HomeCell>()
+        var snapshot = NSDiffableDataSourceSnapshot<Int, GetPosts>()
         snapshot.appendSections([section])
-        snapshot.appendItems(filtered)
+        snapshot.appendItems(filtered ?? [])
         dataSource.apply(snapshot, animatingDifferences: true)
     }
     
@@ -76,17 +75,14 @@ class SearchViewController: UIViewController {
         let input = SearchViewModel.Input(viewWillAppearEvent: self.rx.methodInvoked(#selector(UIViewController.viewWillAppear)).map { _ in }, textBeginChanging: self.searchBar.rx.textDidBeginEditing.asObservable(), cellDidTap: self.tableView.rx.itemSelected.asObservable(), searchText: self.searchBar.rx.text.orEmpty.asObservable())
 
         let output = viewModel?.transform(from: input, disposeBag: viewModel?.disposeBag ?? self.disposeBag)
-        output?.goToDetailCell
-            .subscribe(onNext: { item in
-                self.goToDetail(item: item)
-            }).disposed(by: disposeBag)
+     
     }
     
 }
 
 extension SearchViewController:UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let list = list[indexPath.row]
+        let list = viewModel!.list[indexPath.row]
         self.goToDetail(item: list)
     }
 }
@@ -98,7 +94,7 @@ extension SearchViewController: UISearchBarDelegate {
 }
 
 extension SearchViewController {
-    func goToDetail(item: HomeCell) {
+    func goToDetail(item: GetPosts) {
         let detailVC = UIStoryboard(name: "Home", bundle: nil)
         let vc = detailVC.instantiateViewController(withIdentifier: "DetailInquiryViewController") as! DetailInquiryViewController
        // detailVC.item = item

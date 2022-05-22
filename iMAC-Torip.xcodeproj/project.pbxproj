@@ -52,6 +52,11 @@
 		8E3A51242839289800E9F2A6 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A51232839289800E9F2A6 /* DetailViewController.swift */; };
 		8E3A5128283937C000E9F2A6 /* PlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */; };
 		8E81346228396D5000078711 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346128396D5000078711 /* UIViewController.swift */; };
+		8E81346428397FD100078711 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346328397FD100078711 /* HeaderView.swift */; };
+		8E8134672839810500078711 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8E8134662839810500078711 /* HeaderView.xib */; };
+		8E81346B283986E600078711 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346A283986E600078711 /* PostAPI.swift */; };
+		8E81346E2839886B00078711 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346D2839886B00078711 /* Posts.swift */; };
+		8E8134702839922C00078711 /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346F2839922C00078711 /* DateParser.swift */; };
 		8E9FCB042839406900E36C86 /* AddPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */; };
 		8E9FCB0628394C2F00E36C86 /* AreaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */; };
 		8E9FCB082839667500E36C86 /* TabBarViewUIRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB072839667500E36C86 /* TabBarViewUIRepresentable.swift */; };
@@ -138,6 +143,11 @@
 		8E3A51232839289800E9F2A6 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E81346128396D5000078711 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		8E81346328397FD100078711 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		8E8134662839810500078711 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		8E81346A283986E600078711 /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
+		8E81346D2839886B00078711 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
+		8E81346F2839922C00078711 /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
 		8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E9FCB072839667500E36C86 /* TabBarViewUIRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewUIRepresentable.swift; sourceTree = "<group>"; };
@@ -295,6 +305,8 @@
 		8E3A508B2838C73000E9F2A6 /* iMAC-Torip */ = {
 			isa = PBXGroup;
 			children = (
+				8E81346C2839886100078711 /* Models */,
+				8E813468283986D100078711 /* Service */,
 				06910A04283958EA007FE412 /* Login */,
 				8E3A50C02838C91300E9F2A6 /* Profile */,
 				8E3A50BF2838C90800E9F2A6 /* Alarm */,
@@ -355,6 +367,7 @@
 		8E3A50BE2838C8FE00E9F2A6 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				8E813465283980E000078711 /* Views */,
 				8E3A50D32838D72F00E9F2A6 /* HomeTableViewCell.swift */,
 				8E3A50D42838D72F00E9F2A6 /* HomeTableViewCell.xib */,
 				8E3A50C32838C96500E9F2A6 /* Search.storyboard */,
@@ -400,8 +413,42 @@
 				06910A02283958D3007FE412 /* Color + Extension.swift */,
 				8E3A50DA2838DC7600E9F2A6 /* UIImage+UIButton.swift */,
 				8E81346128396D5000078711 /* UIViewController.swift */,
+				8E81346F2839922C00078711 /* DateParser.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		8E813465283980E000078711 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				8E81346328397FD100078711 /* HeaderView.swift */,
+				8E8134662839810500078711 /* HeaderView.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		8E813468283986D100078711 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				8E813469283986D800078711 /* API */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		8E813469283986D800078711 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8E81346A283986E600078711 /* PostAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8E81346C2839886100078711 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				8E81346D2839886B00078711 /* Posts.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		B7BF26128BA5DFB96CFE3DCD /* Frameworks */ = {
@@ -540,6 +587,7 @@
 				8E3A50C62838C97200E9F2A6 /* Alarm.storyboard in Resources */,
 				E92A3FC02838ECE4009DF54C /* ParticipantTableViewCell.xib in Resources */,
 				E92A3FC828391D3D009DF54C /* TravelRouteArrowCollectionViewCell.xib in Resources */,
+				8E8134672839810500078711 /* HeaderView.xib in Resources */,
 				8E3A50992838C73500E9F2A6 /* LaunchScreen.storyboard in Resources */,
 				8E3A50D62838D72F00E9F2A6 /* HomeTableViewCell.xib in Resources */,
 				8E3A50962838C73500E9F2A6 /* Assets.xcassets in Resources */,
@@ -683,9 +731,11 @@
 				E92A3FB72838DD6F009DF54C /* DetailInquiryViewController.swift in Sources */,
 				E92A3FBB2838E229009DF54C /* TravelRouteCollectionViewCell.swift in Sources */,
 				0653981428397F1D00D18B45 /* ProfileResponse.swift in Sources */,
+				8E81346B283986E600078711 /* PostAPI.swift in Sources */,
 				8E3A512228391E1B00E9F2A6 /* CalendarViewController.swift in Sources */,
 				0653981A2839975E00D18B45 /* Profile.swift in Sources */,
 				0653981628398C8A00D18B45 /* UserRole.swift in Sources */,
+				8E81346428397FD100078711 /* HeaderView.swift in Sources */
 				8E3A50DD28390D4F00E9F2A6 /* PostCodeInputViewController.swift in Sources */,
 				8E3A50CC2838CA6B00E9F2A6 /* SearchViewController.swift in Sources */,
 				8E3A50DB2838DC7600E9F2A6 /* UIImage+UIButton.swift in Sources */,
@@ -699,6 +749,7 @@
 				8E3A50D22838D6A700E9F2A6 /* HomeViewModel.swift in Sources */,
 				06910A1128396A61007FE412 /* ProfileFormView.swift in Sources */,
 				0653980C28397D2400D18B45 /* ProfileViewModel.swift in Sources */,
+				8E81346E2839886B00078711 /* Posts.swift in Sources */,
 				8E9FCB042839406900E36C86 /* AddPlaceCollectionViewCell.swift in Sources */,
 				06910A0B283958EA007FE412 /* LoginVIewController.swift in Sources */,
 				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
@@ -717,6 +768,7 @@
 				E92A3FB32838DBD8009DF54C /* DetailInquiryViewModel.swift in Sources */,
 				06910A16283970B9007FE412 /* Age.swift in Sources */,
 				065398182839954E00D18B45 /* ProfileListView.swift in Sources */,
+				8E8134702839922C00078711 /* DateParser.swift in Sources */,
 				8E3A50CA2838C9CF00E9F2A6 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -11,10 +11,11 @@ import SnapKit
 class AreaCollectionViewCell: UICollectionViewCell {
     static var identifier = "AreaCollectionViewCell"
     
-    var titleLabel: UILabel = {
-        let label = UILabel()
-        label.textColor = .gray
-        return label
+    var titleButton: UIButton = {
+        let button = UIButton()
+        button.tintColor = .blue
+        button.setTitleColor(.gray, for: .normal)
+        return button
     }()
     
     
@@ -30,8 +31,8 @@ class AreaCollectionViewCell: UICollectionViewCell {
 
 extension AreaCollectionViewCell {
     func configureUI(){
-        contentView.addSubview(titleLabel)
-        titleLabel.snp.makeConstraints { make in
+        contentView.addSubview(titleButton)
+        titleButton.snp.makeConstraints { make in
             make.center.equalToSuperview()
         }
     }
