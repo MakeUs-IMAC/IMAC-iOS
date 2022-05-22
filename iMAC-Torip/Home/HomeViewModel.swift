@@ -43,8 +43,7 @@ class HomeViewModel {
     }
     
     func getPosts(){
-        print("get post")
-        self.provider.rx.request(.getPost(userId: 3))
+        self.provider.rx.request(.getPost(userId: 4))
             .filterSuccessfulStatusCodes()
             .map(CommonGetPosts.self)
             .asObservable()

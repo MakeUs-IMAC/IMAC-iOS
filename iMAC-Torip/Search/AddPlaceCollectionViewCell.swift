@@ -12,11 +12,14 @@ class AddPlaceCollectionViewCell: UICollectionViewCell {
     
     var titleLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
         return label
     }()
     
     var addressLabel: UILabel = {
         let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 12)
         return label
     }()
     

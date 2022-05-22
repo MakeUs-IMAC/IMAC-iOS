@@ -18,7 +18,7 @@ class PostCodeInputViewController: UIViewController {
     let indicator = UIActivityIndicatorView(style: .medium)
     var address = ""
     var addressData = ""
-    
+    var section = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         guard let url = URL(string: "https://makeus-imac.github.io/IMAC-postCode/")
@@ -48,11 +48,13 @@ extension PostCodeInputViewController: WKScriptMessageHandler {
             }
         let vc = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: "AddInputViewController") as! AddInputViewController
         vc.addressData = addressData
-        let rootView = self.presentingViewController
-        self.dismiss(animated: true, completion: {
-            rootView?.present(vc, animated: true, completion: nil)
-    
-        })
+        vc.section = section
+        self.navigationController?.pushViewController(vc, animated: true)
+//        let rootView = self.presentingViewController
+//        self.dismiss(animated: true, completion: {
+//            rootView?.present(vc, animated: true, completion: nil)
+//
+//        })
     }
 }
 

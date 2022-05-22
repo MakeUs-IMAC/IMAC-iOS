@@ -39,6 +39,9 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var moreInfoText: UITextView!
     @IBOutlet weak var texfield: UITextField!
     var headerView: HeaderView?
+    var item = [(Int, String, String)]()
+    var section = 0
+    var sectionArray = [[(String, String)]]()
     @IBAction func doneButton() {
         self.alertViewController(title: "글 작성 완료", message: "글 작성이 완료 되었습니다.", completion: { str in
             if str == "확인" {
@@ -47,8 +50,12 @@ class DetailViewController: UIViewController {
         })
         
     }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        print("get sectionArray \(sectionArray)")
+        placeCollectionView.reloadData()
+    }
     
-    var item = [(String, String)]()
     @IBAction func userCountValueChanged(sender: UIStepper) {
          userCountLabel.text = "\(Int(sender.value).description)명"
     }
@@ -64,7 +71,7 @@ class DetailViewController: UIViewController {
         self.view.layoutIfNeeded()
     }
     
-    private var section = 0
+    private var collectionViewSection = 0
     var area = [String]()
     var areaDataSource: UICollectionViewDiffableDataSource<Section, String>! = nil
     var areaSnapshot: NSDiffableDataSourceSnapshot<Section, String>! = nil
@@ -85,6 +92,8 @@ class DetailViewController: UIViewController {
         tapGestureRecognizer.cancelsTouchesInView = false
         profileImageView.addGestureRecognizer(tapGestureRecognizer)
         collectionviewSetting()
+        
+        sectionArray = Array(repeating: [(String, String)](), count: sectionCount)
     }
     
     @objc func imageTapped() {
@@ -175,29 +184,40 @@ extension DetailViewController: PHPickerViewControllerDelegate {
 
 extension DetailViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return sectionCount
+
+        return sectionArray.count
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2 + item.count // addCell
+        return sectionArray[section].count + 1 // addCell
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
         if indexPath.row == 0 {
             let cell = placeCollectionView.dequeueReusableCell(withReuseIdentifier: PlaceCollectionViewCell.identifier, for: indexPath) as! PlaceCollectionViewCell
             cell.backgroundColor = .gray
+            cell.layer.cornerRadius = 10
             return cell
         }else {
             let cell = placeCollectionView.dequeueReusableCell(withReuseIdentifier: AddPlaceCollectionViewCell.identifier, for: indexPath) as! AddPlaceCollectionViewCell
+            cell.backgroundColor = UIColor(red: 153/256, green: 204/256, blue: 255/256, alpha: 0.7)
+            
+            if !sectionArray[indexPath.section].isEmpty {
+                print(indexPath.section)
+                print(indexPath.row)
+                cell.titleLabel.text = sectionArray[indexPath.section][indexPath.row - 1].0
+                cell.addressLabel.text = sectionArray[indexPath.section][indexPath.row - 1].1
+            }
+           
             return cell
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print(indexPath)
-//        self.present(PostCodeInputViewController(), animated: true)
-        
         if indexPath.row == 0 && collectionView == placeCollectionView {
-            self.navigationController?.pushViewController(PostCodeInputViewController(), animated: true)
+            let postVC = PostCodeInputViewController()
+            postVC.section = section
+            self.navigationController?.pushViewController(postVC, animated: true)
         }else {
 
             let item = collectionView.cellForItem(at: indexPath) as! AreaCollectionViewCell
