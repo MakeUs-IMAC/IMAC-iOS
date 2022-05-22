@@ -12,7 +12,7 @@ enum CarType: String, CaseIterable{
     case suv = "SUV"
     case van = "승합차"
     
-    var englishName: String{
+    var englishRawValue: String{
         switch self {
         case .compactCar:
             return "SMALL"
