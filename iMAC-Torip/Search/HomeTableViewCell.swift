@@ -21,6 +21,7 @@ class HomeTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        palceImageView.layer.cornerRadius = 20
         // Initialization code
     }
 

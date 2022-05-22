@@ -33,6 +33,9 @@ extension PostAPI: TargetType {
             return "/post"
         case .getFavoritePosts:
             return "/member/favorites/\(UserDefaults.standard.integer(forKey: "id"))"
+        case .getPost(
+        _):
+            return "/post/"
         }
     }
     

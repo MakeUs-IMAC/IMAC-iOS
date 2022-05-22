@@ -40,8 +40,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var texfield: UITextField!
     var headerView: HeaderView?
     @IBAction func doneButton() {
-        self.alertViewController(title: "글 작성 완료", message: "글 작성이 완료 되었습니다.", completion: { str in })
-        self.navigationController?.popViewController(animated: true)
+        self.alertViewController(title: "글 작성 완료", message: "글 작성이 완료 되었습니다.", completion: { str in
+            if str == "확인" {
+                self.navigationController?.popToRootViewController(animated: true)
+            }
+        })
+        
     }
     
     var item = [(String, String)]()
@@ -193,8 +197,7 @@ extension DetailViewController: UICollectionViewDataSource, UICollectionViewDele
 //        self.present(PostCodeInputViewController(), animated: true)
         
         if indexPath.row == 0 && collectionView == placeCollectionView {
-            let vc = self.storyboard?.instantiateViewController(withIdentifier: "PostCodeInputViewController") as! PostCodeInputViewController
-            self.navigationController?.pushViewController(vc, animated: true)
+            self.navigationController?.pushViewController(PostCodeInputViewController(), animated: true)
         }else {
 
             let item = collectionView.cellForItem(at: indexPath) as! AreaCollectionViewCell

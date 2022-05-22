@@ -58,6 +58,7 @@
 		8E81346B283986E600078711 /* PostAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346A283986E600078711 /* PostAPI.swift */; };
 		8E81346E2839886B00078711 /* Posts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346D2839886B00078711 /* Posts.swift */; };
 		8E8134702839922C00078711 /* DateParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E81346F2839922C00078711 /* DateParser.swift */; };
+		8E8134722839AC3F00078711 /* ReViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E8134712839AC3F00078711 /* ReViewViewController.swift */; };
 		8E9FCB042839406900E36C86 /* AddPlaceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */; };
 		8E9FCB0628394C2F00E36C86 /* AreaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */; };
 		8E9FCB082839667500E36C86 /* TabBarViewUIRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9FCB072839667500E36C86 /* TabBarViewUIRepresentable.swift */; };
@@ -150,6 +151,7 @@
 		8E81346A283986E600078711 /* PostAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostAPI.swift; sourceTree = "<group>"; };
 		8E81346D2839886B00078711 /* Posts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Posts.swift; sourceTree = "<group>"; };
 		8E81346F2839922C00078711 /* DateParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateParser.swift; sourceTree = "<group>"; };
+		8E8134712839AC3F00078711 /* ReViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReViewViewController.swift; sourceTree = "<group>"; };
 		8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddPlaceCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AreaCollectionViewCell.swift; sourceTree = "<group>"; };
 		8E9FCB072839667500E36C86 /* TabBarViewUIRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewUIRepresentable.swift; sourceTree = "<group>"; };
@@ -383,6 +385,7 @@
 				8E3A5127283937C000E9F2A6 /* PlaceCollectionViewCell.swift */,
 				8E9FCB032839406900E36C86 /* AddPlaceCollectionViewCell.swift */,
 				8E9FCB0528394C2F00E36C86 /* AreaCollectionViewCell.swift */,
+				8E8134712839AC3F00078711 /* ReViewViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -757,6 +760,7 @@
 				8E81346E2839886B00078711 /* Posts.swift in Sources */,
 				8E9FCB042839406900E36C86 /* AddPlaceCollectionViewCell.swift in Sources */,
 				06910A0B283958EA007FE412 /* LoginVIewController.swift in Sources */,
+				8E8134722839AC3F00078711 /* ReViewViewController.swift in Sources */,
 				8E3A508D2838C73000E9F2A6 /* AppDelegate.swift in Sources */,
 				06910A09283958EA007FE412 /* LoginWebView.swift in Sources */,
 				06910A0A283958EA007FE412 /* LoginView.swift in Sources */,
