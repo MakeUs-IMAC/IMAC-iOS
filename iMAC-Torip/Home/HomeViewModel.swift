@@ -43,13 +43,14 @@ class HomeViewModel {
     }
     
     func getPosts(){
-        self.provider.rx.request(.getPost(userId: userId))
+        print("get post")
+        self.provider.rx.request(.getPost(userId: 3))
             .filterSuccessfulStatusCodes()
-            .map([GetPosts].self)
+            .map(CommonGetPosts.self)
             .asObservable()
             .subscribe(onNext: { item in
-                self.list = item
-                
+                self.list = item.result
+//                print(self.list)
                 //self.list = item
             }).disposed(by: disposeBag)
         

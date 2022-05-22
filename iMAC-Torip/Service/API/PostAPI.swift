@@ -28,8 +28,9 @@ extension PostAPI: TargetType {
             return "/post/\(postId)"
         case .getDetailPost(let postId):
             return "/post/\(postId)"
-        case .getPost(_):
-            return "/post"
+        case .getPost(
+        _):
+            return "/post/"
         }
     }
     
@@ -67,7 +68,7 @@ extension PostAPI: TargetType {
         case .create(_):
             return ["Content-Type": "multipart/form-data", "x-access-token" : jwtToken]
         case .updateStatus(_, _), .getPost(_), .getDetailPost(_):
-            return ["x-access-token" : jwtToken]
+            return ["x-access-token" : "eyJ0eXBlIjoiand0IiwiYWxnIjoiSFMyNTYifQ.eyJ1c2VySWR4IjozLCJpYXQiOjE2NTMxNzAwNjksImV4cCI6MTY1NDY0MTI5OH0.ZXvptx35LodWeN2mTVEVP3nKGzazXEPiKNfXPwNnXws"]
         }
     }
     

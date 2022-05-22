@@ -32,7 +32,7 @@ struct CreatePlace: Codable {
 struct CommonGetPosts: Codable {
     var code: Int
     var isSuccess: Bool
-    var message: String
+    var message: [String]
     var result: [GetPosts]
 }
 

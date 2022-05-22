@@ -25,6 +25,7 @@ class SearchViewModel {
         let goToDetailCell = PublishSubject<GetPosts>()
     }
     
+    
     func transform(from input: Input, disposeBag: DisposeBag) -> Output {
         let output = Output()
         input.viewWillAppearEvent
@@ -41,7 +42,8 @@ class SearchViewModel {
         return output
     }
     
-    func getPosts(){
+    func getPosts() {
+        
         self.provider.rx.request(.getPost(userId: userId))
             .filterSuccessfulStatusCodes()
             .map([GetPosts].self)
