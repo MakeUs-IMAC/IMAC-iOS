@@ -39,6 +39,9 @@ class HomeViewController: UIViewController {
     private func configureDataSource() {
         tableView.register(HomeTableViewCell.nib(), forCellReuseIdentifier: HomeTableViewCell.identifier)
         dataSource = UITableViewDiffableDataSource<Int, GetPosts>(tableView: tableView) { (tableView, indexPath, item) -> HomeTableViewCell? in let cell = tableView.dequeueReusableCell(withIdentifier: HomeTableViewCell.identifier, for: indexPath) as! HomeTableViewCell
+            //Date
+//            let dateString = "\(Date(item.start).year)년 \(Date(item.start).month)월 \(Date(item.start).day)부터 ~ \(Date(item.end).year)년 \(Date(item.end).month)월 \(Date(item.end).day)까지"
+//            Date(item.region).year
             cell.titleLabel.text = item.region
             cell.placeLabel.text = "\(item.start) 부터 \(item.end)까지"
             cell.palceImageView.sd_setImage(with: URL(string: item.image))

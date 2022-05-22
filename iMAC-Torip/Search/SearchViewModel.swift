@@ -48,7 +48,7 @@ class SearchViewModel {
             .asObservable()
             .subscribe(onNext: { item in
                 self.list = item.result
-//                print(self.list)
+                print(self.list)
                 //self.list = item
             }).disposed(by: disposeBag)
         
