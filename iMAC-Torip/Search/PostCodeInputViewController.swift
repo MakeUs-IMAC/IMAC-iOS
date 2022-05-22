@@ -51,12 +51,9 @@ extension PostCodeInputViewController: WKScriptMessageHandler {
         let rootView = self.presentingViewController
         self.dismiss(animated: true, completion: {
             rootView?.present(vc, animated: true, completion: nil)
-//
-//            self.navigationController?.pushViewController(vc, animated: true)
+    
         })
-      
-       
-        }
+    }
 }
 
 

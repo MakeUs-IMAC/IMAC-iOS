@@ -39,7 +39,7 @@ class AddInputViewController: UIViewController {
               
                   // rootView!.item.append((self.titleTextField.text!, self.addressTextField.text!))
                 self.dismiss(animated: true)
-//                print(self.presentingViewController.presen)
+                
             }).disposed(by: disposeBag)
     }
 }

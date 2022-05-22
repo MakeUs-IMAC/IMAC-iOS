@@ -21,13 +21,17 @@ class HomeViewController: UIViewController {
     var dataSource: UITableViewDiffableDataSource<Int, GetPosts>! = nil
     var currentSnapshot: NSDiffableDataSourceSnapshot<Int, GetPosts>! = nil
  
-    var viewModel: HomeViewModel?
+    var viewModel = HomeViewModel()
     private var section = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureDataSource()
+
         viewModel = HomeViewModel()
+        bindViewModel()
+        DispatchQueue.main.asyncAfter (deadline: .now() + .seconds(2)) {
+            self.configureDataSource()
+        }
         floatingButton.makeCircleShape()
         tableView.delegate = self
     }
@@ -47,7 +51,7 @@ class HomeViewController: UIViewController {
         var snapshot = NSDiffableDataSourceSnapshot<Int, GetPosts>()
         snapshot.appendSections([section])
         section += 1
-        snapshot.appendItems(viewModel?.list ?? [])
+        snapshot.appendItems(viewModel.list)
         dataSource.apply(snapshot)
     }
     
@@ -56,14 +60,6 @@ class HomeViewController: UIViewController {
         self.view.endEditing(true) 
     }
     
-    func performQuery(with filter: String?) {
-        let filtered = viewModel?.list.filter { ($0.region.hasPrefix(filter ?? "" ))}
-
-        var snapshot = NSDiffableDataSourceSnapshot<Int, GetPosts>()
-        snapshot.appendSections([section])
-        snapshot.appendItems(filtered ?? [])
-        dataSource.apply(snapshot, animatingDifferences: true)
-    }
     
     func bindViewModel() {
         let input = HomeViewModel.Input(viewWillAppearEvent: self.rx.methodInvoked(#selector(UIViewController.viewWillAppear)).map { _ in }, floatingButton: self.floatingButton.rx.tap.asObservable(), cellDidTap: self.tableView.rx.itemSelected.asObservable())
@@ -73,8 +69,8 @@ class HomeViewController: UIViewController {
                 self.goToWrite()
             }).disposed(by: disposeBag)
         
-        let output = viewModel?.transform(from: input, disposeBag: viewModel?.disposeBag ?? self.disposeBag)
-        output?.goToDetailCell
+        let output = viewModel.transform(from: input, disposeBag: viewModel.disposeBag)
+        output.goToDetailCell
             .subscribe(onNext: { item in
                 self.goToDetail(item: item)
             }).disposed(by: disposeBag)
@@ -85,16 +81,11 @@ class HomeViewController: UIViewController {
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let list = viewModel!.list[indexPath.row]
+        let list = viewModel.list[indexPath.row]
         self.goToDetail(item: list)
     }
 }
 
-extension HomeViewController: UISearchBarDelegate {
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        performQuery(with: searchText)
-    }
-}
 
 extension HomeViewController {
     func goToWrite(){
