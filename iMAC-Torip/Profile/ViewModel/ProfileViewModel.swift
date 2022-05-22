@@ -25,7 +25,7 @@ class ProfileViewModel: ObservableObject{
         provider.request(.checkPresenceOfProfile){
             switch $0{
             case let .success(response):
-//                print(try! response.mapJSON())
+                print(try! response.mapJSON())
                 self.profile = try? response.map(ProfileResponse.self).result
                 completion?(self.profile!.nickName != "", nil)
             case let .failure(error):
@@ -42,13 +42,14 @@ class ProfileViewModel: ObservableObject{
     func registProfile(completion: ((Bool) -> Void)? = nil){
         let provider = MoyaProvider<ProfileApi>()
         
-        provider.request(.registPorfile(Profile(role: role, nickname: nickname, phone: contract, age: age, gender: gender, carType: carType))){
+        provider.request(.registProfile(Profile(role: role, nickname: nickname, phone: contract, age: age, gender: gender, carType: carType))){
             switch $0{
             case let .success(response):
                 if response.statusCode >= 200 && response.statusCode <= 300{
                     completion?(true)
                 }
                 else{
+//                    print(UserDefaults.standard.integer(forKey: "id"))
                     print(response.statusCode)
                     completion?(false)
                 }
