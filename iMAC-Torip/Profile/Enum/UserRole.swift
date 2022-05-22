@@ -9,4 +9,13 @@ import Foundation
 enum UserRole:String, CaseIterable{
     case traveler = "여행자"
     case driver = "운전자"
+    
+    var englishRawValue: String{
+        switch self {
+        case .traveler:
+            return "TRAVELER"
+        case .driver:
+            return "DRIVER"
+        }
+    }
 }

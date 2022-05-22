@@ -37,16 +37,8 @@ struct Profile:Codable{
             self.role = "TRAVELER"
         case .driver:
             switch carType{
-            case .compactCar:
-                self.carType = "SMALL"
-            case .sedan:
-                self.carType = "SEDAN"
-            case .suv:
-                self.carType = "SUV"
-            case .van:
-                self.carType = "VAN"
             default:
-                self.carType = "X"
+                self.carType = carType!.englishRawValue
             }
             self.gender = "X"
             self.age = 0

@@ -16,8 +16,9 @@ class ProfileViewModel: ObservableObject{
     var gender: Gender = .male
     var age: Age = .teen
     var carType: CarType = .compactCar
-   
-    private var profile: Profile? = nil
+    
+//    private var myProfile: Profile? = nil
+    public private(set) var profile: Profile? = nil
     
     func checkPresenceOfProfile(completion: ((Bool, Error?) -> Void)? = nil){
         let provider = MoyaProvider<ProfileApi>()
@@ -25,9 +26,16 @@ class ProfileViewModel: ObservableObject{
         provider.request(.checkPresenceOfProfile){
             switch $0{
             case let .success(response):
-                print(try! response.mapJSON())
-                self.profile = try? response.map(ProfileResponse.self).result
-                completion?(self.profile!.nickName != "", nil)
+                if response.statusCode >= 200 && response.statusCode <= 300{
+                    self.profile = try? response.map(ProfileResponse.self).result
+                    completion?(self.profile!.nickName != "", nil)
+                }
+                else{
+                    print(try! response.mapJSON())
+                    print(response.statusCode)
+                    completion?(false, nil)
+                }
+                
             case let .failure(error):
                 if error.errorCode == 404{
                     completion?(false, nil)
