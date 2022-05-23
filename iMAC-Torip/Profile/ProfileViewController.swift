@@ -5,17 +5,20 @@
 //  Created by JoSoJeong on 2022/05/21.
 //
 
-import UIKit
+import SwiftUI
 
 class ProfileViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    private let viewModel = ProfileViewModel()
+    
+    required init?(coder: NSCoder) {
+        super.init(coder: coder)
+        viewModel.checkPresenceOfProfile()
     }
     
-
+    @IBSegueAction func addSwiftUiView(_ coder: NSCoder) -> UIViewController? {
+        return UIHostingController(coder: coder, rootView: ProfileListMenuView().environmentObject(viewModel))
+    }
+    
     /*
     // MARK: - Navigation
 
